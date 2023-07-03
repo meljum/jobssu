@@ -1,0 +1,350 @@
+.header {
+  width: 100%;
+  .container {
+    width: 94%;
+    display: flex;
+    height: inherit;
+    position: fixed;
+    padding: 1px 32px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    p {
+      color: #0057ff;
+      font-size: 18px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .burger {
+      cursor: pointer;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      .hr {
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: #0057ff;
+        top: 50px;
+        left: -20px;
+        background-color: #0057ff;
+      }
+
+      .dropdown_content {
+        position: absolute;
+        text-align: start;
+        background-color: white;
+        top: 60px;
+        right: -42px;
+        width: 111px;
+        height: 175px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        .navLink {
+          margin: 0;
+          opacity: 1;
+        }
+
+        a {
+          position: relative;
+          text-align: start;
+          font-size: 16px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          color: black;
+          padding: 6px 25px;
+          text-decoration: none;
+          display: block;
+          top: 10px;
+          &:hover {
+            color: #0057ff;
+          }
+        }
+      }
+    }
+
+    .vak,
+    .konk {
+      position: relative;
+      font-size: 14px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .blackText {
+      color: #000000;
+    }
+
+    .blackText:hover {
+      color: #0075ff;
+    }
+    .input {
+      display: flex;
+      .main__icon {
+        position: relative;
+        opacity: 0.7;
+        height: 20px;
+        width: 25px;
+        left: 8%;
+        top: 9px;
+        z-index: 1;
+      }
+      .place {
+        position: relative;
+        left: 2.5%;
+        width: 318px;
+        height: 33px;
+        cursor: pointer;
+        border-right: none !important;
+        border-radius: 3px 0 0 3px;
+        border: 0.3px solid rgba(0, 0, 0, 0.7);
+        background: #fff;
+      }
+      .place::placeholder {
+        color: black;
+        opacity: 0.3;
+        padding-left: 9%;
+        color: #aba7a7;
+        font-size: 14px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .sel {
+        position: relative;
+        width: 105px;
+        height: 37px;
+        cursor: pointer;
+        option {
+          color: blue;
+        }
+      }
+      .serch {
+        position: relative;
+        color: white;
+        border-radius: 0px 4px 4px 0px;
+        border: 0.3px solid #000;
+        background: #0359ff;
+        text-align: center;
+        border: none;
+        width: 100px;
+        height: 37px;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 400;
+        a {
+          position: relative;
+          top: 10px;
+        }
+      }
+    }
+    .translate {
+      position: relative;
+      left: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: Arial;
+      font-weight: 400;
+      opacity: 0.800000011920929;
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+    .notific {
+      position: relative;
+      top: 3px;
+      cursor: pointer;
+    }
+
+    .dropdownMassege {
+      .hr1 {
+        position: absolute;
+        margin-left: -7px;
+        top: 73px;
+        width: 43.046px;
+        height: 3px;
+        border-radius: 20px;
+        background: #0057ff;
+      }
+      .dropdownMassege_content {
+        position: absolute;
+        background-color: white;
+        right: 52px;
+        top: 85px;
+        border-radius: 5px;
+        width: 390px;
+        height: 385px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 0.7;
+        .dropMassege {
+          display: inline-block;
+          .divMasseges {
+            display: flex;
+            text-align: start;
+            margin: 12px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+            background-color: white;
+            padding: 15px 13px;
+
+            img {
+              align-items: center;
+              height: 40px;
+              width: 50px;
+              margin: 10px 20px;
+            }
+          }
+        }
+        .btn {
+          width: 131px;
+          height: 30px;
+          border: none;
+          border-radius: 5px;
+          background-color: #0057ff;
+          position: absolute;
+          top: 345px;
+          left: 250px;
+          z-index: 10;
+          cursor: pointer;
+          a {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            top: 5px;
+            font-size: 14px;
+            font-family: Arial;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .masseges {
+      cursor: pointer;
+    }
+    .archive {
+      cursor: pointer;
+    }
+
+    .group179 {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      top: 3px;
+      cursor: pointer;
+    }
+    .dropdownUser_content {
+      position: absolute;
+      left: 78%;
+      top: 77px;
+      width: 280px;
+      height: 255px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      .btn {
+        width: 114px;
+        height: 27px;
+        border-radius: 5px;
+        background: #0057ff;
+        margin: 25px 95px;
+        cursor: pointer;
+        a {
+          position: relative;
+          color: #fff;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          top: 4px;
+        }
+      }
+      .dropdownUser_header {
+        width: 281px;
+        height: 33px;
+        flex-shrink: 0;
+        display: flex;
+        border-radius: 5px 5px 0px 0px;
+        background: #0057ff;
+        display: inline-block;
+        .verticalLine {
+          position: relative;
+          display: inline-block;
+          border-left: 1px solid black;
+          height: 20px;
+          margin: 0px 20px;
+          top: 10px;
+        }
+
+        .seekerActive {
+          color: blue;
+        }
+        .employerActive {
+          color: blue;
+        }
+
+        p {
+          margin-top: 7px;
+          color: #fff;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        a {
+          color: #333;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          position: relative;
+          cursor: pointer;
+        }
+        hr {
+          margin-top: 15px;
+        }
+      }
+      .dropdown_add {
+        position: relative;
+        text-align: start;
+        margin: -15px 25px;
+        p {
+          color: #333;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+          &:hover {
+            color: blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
