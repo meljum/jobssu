@@ -1,0 +1,117 @@
+.wrapper {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    border-radius: 8.821px;
+    background: #FFF;
+    box-shadow: 0px 3.9923593997955322px 19.9617977142334px 0px rgba(0, 0, 0, 0.10);
+    padding: 20px 20px 10px 20px;
+
+    img {
+        cursor: pointer;
+    }
+
+    .wrapper__bottom {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .button {
+            text-transform: capitalize;            
+            padding: 9px 20px;
+            border-radius: 5.292px;
+            background: #0057FF;
+            color: #FFF;
+            font-size: 14.113px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        span {
+            opacity: 0.5;
+            color: rgba(51, 51, 51, 1);
+            font-size: 11.977px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: lowercase;
+        }
+    }
+
+    .wrapper__middle {
+        h1 {
+            color: #333;
+            font-size: 22.763px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        span {
+            opacity: 0.5;
+            color: #333;
+            font-size: 12px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 6px;
+            color: #0057FF;
+            font-size: 16px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .wrapper__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        span {
+            opacity: 0.5;
+            color: #333;
+            font-size: 11.977px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: lowercase;
+        }
+
+        .top__photo {
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            p {
+                color: #333;
+                font-size: 13.801px;
+                font-family: Arial;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            img {
+                margin-right: 5px;
+            }
+        }
+    }
+}
