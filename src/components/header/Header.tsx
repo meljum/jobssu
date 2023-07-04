@@ -69,7 +69,10 @@ const Header = () => {
     []
   );
   const dropdownItems = [
-    {href: "/JobsPage",label: isSeeker ? " Добавить резюме" : "Добавить вакансию"},
+    {
+      href: "/JobsPage",
+      label: isSeeker ? " Добавить резюме" : "Добавить вакансию",
+    },
     { href: "/Profile", label: "Профиль" },
     { href: "/HelpPage", label: "Помощь" },
     { href: "/Settings", label: "Настройки" },
@@ -192,6 +195,11 @@ const Header = () => {
             width={35}
             height={45}
             onClick={handleToggleDropdown}
+            style={{
+              objectFit: "contain",
+              width: "auto",
+              height: "auto",
+            }}
           />
           {isDropdownOpen && (
             <div className={scss.dropdownUser_content}>
