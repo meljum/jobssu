@@ -6,7 +6,6 @@ import Link from "next/link";
 import scss from "./Header.module.scss";
 import { links } from "../../constants/header";
 import masseges from "../../constants/masseges";
-import dropdownItems from "@/constants/dropdownItems";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -69,6 +68,12 @@ const Header = () => {
       )),
     []
   );
+  const dropdownItems = [
+    {href: "/JobsPage",label: isSeeker ? " Добавить резюме" : "Добавить вакансию"},
+    { href: "/Profile", label: "Профиль" },
+    { href: "/HelpPage", label: "Помощь" },
+    { href: "/Settings", label: "Настройки" },
+  ];
 
   const dropdownItemsJSX = useMemo(() => {
     return dropdownItems.map((item, index) => (
@@ -187,9 +192,7 @@ const Header = () => {
             width={35}
             height={45}
             onClick={handleToggleDropdown}
-            style={{ objectFit: "contain", width: "100%", height: "100%" }}
           />
-
           {isDropdownOpen && (
             <div className={scss.dropdownUser_content}>
               <div className={scss.dropdownUser_header}>
