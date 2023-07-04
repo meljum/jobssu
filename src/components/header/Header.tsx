@@ -192,6 +192,11 @@ const Header = () => {
             width={35}
             height={45}
             onClick={handleToggleDropdown}
+            style={{
+              objectFit: "contain",
+              width: "auto",
+              height: "auto",
+            }}
           />
           {isDropdownOpen && (
             <div className={scss.dropdownUser_content}>
