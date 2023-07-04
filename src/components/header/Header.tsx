@@ -6,6 +6,7 @@ import Link from "next/link";
 import scss from "./Header.module.scss";
 import { links } from "../../constants/header";
 import masseges from "../../constants/masseges";
+import dropdownItems from "@/constants/dropdownItems";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -21,14 +22,23 @@ const Header = () => {
   const handleLogout = () => {
     setIsDropdownOpen(false);
   };
+
   const handleToggle = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+    setIsDropdownOpen(false);
+    setIsDropdownOp(false);
   };
+
   const handleToggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
+    setIsOpen(false);
+    setIsDropdownOp(false);
   };
+
   const handleToggleDrop = () => {
-    setIsDropdownOp(!isDropdownOp);
+    setIsDropdownOp((prevIsDropdownOp) => !prevIsDropdownOp);
+    setIsOpen(false);
+    setIsDropdownOpen(false);
   };
   const handleToggleUserType = (
     isEmployerClicked: boolean | ((prevState: boolean) => boolean)
@@ -60,6 +70,13 @@ const Header = () => {
     []
   );
 
+  const dropdownItemsJSX = useMemo(() => {
+    return dropdownItems.map((item, index) => (
+      <Link key={index} href={item.href} passHref>
+        <p>{item.label}</p>
+      </Link>
+    ));
+  }, [dropdownItems]);
   return (
     <div className={scss.header}>
       <div className={scss.container}>
@@ -170,7 +187,9 @@ const Header = () => {
             width={35}
             height={45}
             onClick={handleToggleDropdown}
+            style={{ objectFit: "contain", width: "100%", height: "100%" }}
           />
+
           {isDropdownOpen && (
             <div className={scss.dropdownUser_content}>
               <div className={scss.dropdownUser_header}>
@@ -191,18 +210,7 @@ const Header = () => {
                 <hr />
               </div>
               <div className={isSeeker ? scss.dropdown_add : scss.dropdown_add}>
-                <Link href="/JobsPage" passHref>
-                  <p>Добавить {isSeeker ? "резюме" : "вакансию"}</p>
-                </Link>
-                <Link href="/Profile" passHref>
-                  <p>Профиль</p>
-                </Link>
-                <Link href="/HelpPage" passHref>
-                  <p>Помощь</p>
-                </Link>
-                <Link href="/Settings" passHref>
-                  <p>Настройки</p>
-                </Link>
+                {dropdownItemsJSX}
               </div>
               <div className={scss.btn}>
                 <a onClick={handleLogout}>Выйти</a>
