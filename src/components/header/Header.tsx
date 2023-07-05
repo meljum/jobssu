@@ -14,6 +14,7 @@ const Header = () => {
   const [isDropdownOp, setIsDropdownOp] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
+  const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
   const handleClick = (lang: string | undefined) => {
     i18n.changeLanguage(lang);
   };
@@ -69,7 +70,10 @@ const Header = () => {
     []
   );
   const dropdownItems = [
-    {href: "/JobsPage",label: isSeeker ? " Добавить резюме" : "Добавить вакансию"},
+    {
+      href: "/JobsPage",
+      label: isSeeker ? " Добавить резюме" : "Добавить вакансию",
+    },
     { href: "/Profile", label: "Профиль" },
     { href: "/HelpPage", label: "Помощь" },
     { href: "/Settings", label: "Настройки" },
@@ -82,6 +86,11 @@ const Header = () => {
       </Link>
     ));
   }, [dropdownItems]);
+
+  const toggleDropdown = () => {
+    setIsSelDropdownOpen((prevState) => !prevState);
+  };
+
   return (
     <div className={scss.header}>
       <div className={scss.container}>
@@ -124,11 +133,35 @@ const Header = () => {
             className={scss.place}
             placeholder={t("header.plaseholder") || ""}
           />
-          <select className={scss.sel}>
-            <option>{t("header.title4")}</option>
-            <option>Резюме</option>
-            <option>Компания</option>
-          </select>
+          <div className={scss.sel}>
+            <div className={scss.selectedOption}>
+              <Link href="/JobsPage" passHref legacyBehavior>
+                <a>{t("header.title4")}</a>
+              </Link>
+              <Image
+                className={scss.ArrowDr}
+                onClick={toggleDropdown}
+                src="/images/header/ArrowDropDownIcon.svg"
+                alt="Dropdown Icon"
+                width={11}
+                height={11}
+              />
+            </div>
+            {isSelDropdownOpen && (
+              <div className={scss.dropdownOptions}>
+                <div className={scss.dropdownOptions_a}>
+                  <Link href="/JobsPage" passHref legacyBehavior>
+                    <a>Резюме</a>
+                  </Link>
+                </div>
+                <div className={scss.dropdownOptionsA}>
+                  <Link href="/Сompanies" passHref legacyBehavior>
+                    <a>Компания</a>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <div className={scss.serch}>
             <a>{t("header.plaseholder1") || ""}</a>
           </div>

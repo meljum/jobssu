@@ -55,7 +55,6 @@
         right: -42px;
         width: 111px;
         height: 175px;
-        flex-shrink: 0;
         border-radius: 5px;
         background: #fff;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -139,8 +138,67 @@
         height: 37px;
         margin-left: 15px;
         cursor: pointer;
-        option {
-          color: blue;
+        .dropdownOptions {
+          position: relative;
+          text-align: start;
+          background-color: white;
+          width: 105px;
+          height: 80px;
+          border-radius: 5px;
+          background: #fff;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          .dropdownOptionsA {
+            a {
+              position: relative;
+              top: 5px;
+            }
+          }
+          .dropdownOptions_a {
+            padding: 10px 5px;
+            text-align: start;
+            a {
+              position: relative;
+              left: -4px;
+              top: 5px;
+            }
+          }
+          a {
+            position: relative;
+            text-align: start;
+            padding: 17px 17px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            &:hover {
+              color: #0057ff;
+              cursor: pointer;
+            }
+          }
+        }
+        .selectedOption {
+          width: 105px;
+          height: 35px;
+          border: 1px solid #3b2e2e;
+
+          a {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: relative;
+            text-align: center;
+            top: 5px;
+          }
+          .ArrowDr {
+            position: relative;
+            left: 5px;
+            top: 6px;
+          }
         }
       }
       .serch {
@@ -262,8 +320,8 @@
     }
     .dropdownUser_content {
       position: absolute;
-      left: 78%;
-      top: 77px;
+      left: 80%;
+      top: 100px;
       width: 280px;
       height: 255px;
       border-radius: 5px;
