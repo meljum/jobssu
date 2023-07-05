@@ -90,7 +90,7 @@ const Vakansii: React.FC = () => {
       time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
-    },
+    }
   ];
 
   const renderVakansii = useMemo(() => (
