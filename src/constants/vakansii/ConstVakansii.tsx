@@ -1,9 +1,10 @@
 import Button from '../../components/button/Button'
 import zametki from '../../../public/images/vakansii/bookmark.svg'
 import scss from './ConstVakansii.module.scss'
-import { useMemo } from 'react'
+import { useMemo, useTransition } from 'react'
 import { IconButton, Stack } from '@mui/material';
 import Buttonn from '@mui/material/Button';
+import { useTranslation } from 'react-i18next';
 
 interface VakansiiItem {
   title: string;
@@ -12,72 +13,81 @@ interface VakansiiItem {
   price: string;
   place: string;
   date: string;
+  time: string;
 }
 
 const Vakansii: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const arrVakansii: VakansiiItem[] = [
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
-      place: "Кыргызстан, Бишкек",
-      date: '20 мая, 2023'
-    },
-
-    {
-      title: 'Solid Academy',
-      online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
     {
       title: 'Solid Academy',
       online: 'Онлайн',
-      name: "Требуется уборщики в компанию",
-      price: "250$ / за час",
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
+      place: "Кыргызстан, Бишкек",
+      date: '20 мая, 2023'
+    },
+    {
+      title: 'Solid Academy',
+      online: 'Онлайн',
+      name: t("vakansii.title"),
+      price: "250$ /",
+      time: t("vakansii.time"),
       place: "Кыргызстан, Бишкек",
       date: '20 мая, 2023'
     },
@@ -102,12 +112,12 @@ const Vakansii: React.FC = () => {
         </div>
         <div className={scss.wrapper__middle}>
           <h1>{e.name}</h1>
-          <p>{e.price}</p>
+          <p>{e.price} {e.time}</p>
           <span>{e.place}</span>
         </div>
         <div className={scss.wrapper__bottom}>
           <span>{e.date}</span>
-          <Buttonn className={scss.button} variant="contained">Подробнее</Buttonn>
+          <Buttonn className={scss.button} variant="contained">{t("vakansii.podrobnee")}</Buttonn>
         </div>
       </div>
     ))

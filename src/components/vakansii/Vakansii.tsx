@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useState, useTransition } from 'react';
 import scss from './Vakansii.module.scss'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import ConstVakansii from '@/constants/vakansii/ConstVakansii'
 import { Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 const options = [
     'Регионы',
     'Кыргызстан',
@@ -19,6 +20,7 @@ const options = [
 ];
 
 function Vakansii() {
+    const { t, i18n } = useTranslation();
     const renderVakansii = ConstVakansii();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
@@ -55,7 +57,7 @@ function Vakansii() {
                         >
                             <label >
                                 <ListItemText
-                                    primary="Работа и вакансии в Бишкеке"
+                                    primary={t("vakansii.rabota")}
                                 />
                                 <img src="./images/vakansii/Vector (2).svg" alt="" />
                             </label>
@@ -91,7 +93,7 @@ function Vakansii() {
                         ))}
                     </Menu>
                 </div>
-                <Button className={scss.button} variant='contained'>Все ваканции</Button>
+                <Button className={scss.button} variant='contained'>{t("vakansii.vakansii")}</Button>
             </div>
             <div className={scss.wrapper__bottom}>
                 {renderVakansii}
