@@ -14,12 +14,14 @@ interface VakansiiItem {
   place: string;
   date: string;
   time: string;
+  id: number;
 }
 
 const Vakansii: React.FC = () => {
   const { t, i18n } = useTranslation();
   const arrVakansii: VakansiiItem[] = [
     {
+      id: 1,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -29,6 +31,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 2,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -38,6 +41,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 3,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -47,6 +51,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 4,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -56,6 +61,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 5,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -65,6 +71,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 6,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -74,6 +81,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 7,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -83,6 +91,7 @@ const Vakansii: React.FC = () => {
       date: '20 мая, 2023'
     },
     {
+      id: 8,
       title: 'Solid Academy',
       online: 'Онлайн',
       name: t("vakansii.title"),
@@ -95,7 +104,7 @@ const Vakansii: React.FC = () => {
 
   const renderVakansii = useMemo(() => (
     arrVakansii.map((e) => (
-      <div className={scss.wrapper}>
+      <div className={scss.wrapper} key={e.id}>
         <div className={scss.wrapper__top}>
           <div className={scss.top__photo}>
             <label>
