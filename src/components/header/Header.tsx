@@ -134,13 +134,10 @@ const Header = () => {
             placeholder={t("header.plaseholder") || ""}
           />
           <div className={scss.sel}>
-            <div className={scss.selectedOption}>
-              <Link href="/JobsPage" passHref legacyBehavior>
-                <a>{t("header.title4")}</a>
-              </Link>
+            <div className={scss.selectedOption} onClick={toggleDropdown}>
+              <a>{t("header.title4")}</a>
               <Image
                 className={scss.ArrowDr}
-                onClick={toggleDropdown}
                 src="/images/header/ArrowDropDownIcon.svg"
                 alt="Dropdown Icon"
                 width={11}
@@ -227,8 +224,8 @@ const Header = () => {
             onClick={handleToggleDropdown}
             style={{
               objectFit: "contain",
-              width: "auto",
-              height: "auto",
+              // width: "auto",
+              // height: "auto",
             }}
           />
           {isDropdownOpen && (
