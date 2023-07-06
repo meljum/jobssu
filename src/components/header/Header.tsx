@@ -196,20 +196,28 @@ const Header = () => {
             </>
           )}
         </div>
-        <Image
-          src="/images/header/messages-2.svg"
-          className={scss.masseges}
-          alt="Messages"
-          width={25}
-          height={25}
-        />
-        <Image
-          src="/images/header/archive-tick.svg"
-          className={scss.archive}
-          alt="Archive"
-          width={25}
-          height={25}
-        />
+        <Link href="/NotificationsPage" passHref>
+          <div>
+            <Image
+              src="/images/header/messages-2.svg"
+              className={scss.messages}
+              alt="Messages"
+              width={25}
+              height={25}
+            />
+          </div>
+        </Link>
+        <Link href="/FavoritesPage" passHref>
+          <div>
+            <Image
+              src="/images/header/archive-tick.svg"
+              className={scss.archive}
+              alt="Archive"
+              width={25}
+              height={25}
+            />
+          </div>
+        </Link>
         <div className={scss.dropdown_user}>
           <Image
             src={
