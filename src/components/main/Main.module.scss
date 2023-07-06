@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Arial";
+    src: url("/fonts/Arialm.ttf") format("truetype");
+}
+
+.wrapper {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ),url(../../../public/images/main/Background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+
+    .text {
+        position: absolute;
+        z-index: 6;
+        top: 410px;
+        left: 356px;
+        display: flex;
+        flex-direction: row;
+        gap: 139px;
+        text-align: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            p {
+                font-family: Arial;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #ffffff;
+                height: 0;
+
+            }
+
+            h2 {
+                font-family: Arial;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 70px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #ffffff;
+                height: 0;
+            }
+        }
+    }
+
+    .cercles {
+        position: absolute;
+        top: 410px;
+        left: 332px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 90px;
+        
+        z-index: 5;
+    }
+
+    h1 {
+        font-family: Arial;
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 66.69px;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 181px;
+        z-index: 6;
+    }
+}
+
+.wave {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    top: 134px;
+
+    &__one {
+        position: absolute;
+        background-image: url(../../../public/images/main/Wave1.svg);
+        width: 7000px;
+        height: 106px;
+        animation: waves 13s infinite linear;
+    }
+
+    &__two {
+        background-image: url(../../../public/images/main/Wave2.svg);
+        width: 7000px;
+        height: 106px;
+        animation: waves2 16s infinite linear;
+
+    }
+
+    &__three {
+        position: absolute;
+        top: 0;
+        background-image: url(../../../public/images/main/Wave3.svg);
+        width: 7000px;
+        height: 106px;
+        animation: waves2 8s infinite linear;
+
+
+    }
+
+
+}
+
+
+@keyframes waves {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1938px;
+    }
+}
+
+@keyframes waves2 {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1880px;
+    }
+
+}
