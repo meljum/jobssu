@@ -1,10 +1,9 @@
-import Button from '../../components/button/Button'
-import zametki from '../../../public/images/vakansii/bookmark.svg'
 import scss from './ConstVakansii.module.scss'
 import { useMemo, useTransition } from 'react'
 import { IconButton, Stack } from '@mui/material';
 import Buttonn from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image'
 
 interface VakansiiItem {
   title: string;
@@ -18,7 +17,7 @@ interface VakansiiItem {
 }
 
 const Vakansii: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const arrVakansii: VakansiiItem[] = [
     {
       id: 1,
@@ -108,7 +107,11 @@ const Vakansii: React.FC = () => {
         <div className={scss.wrapper__top}>
           <div className={scss.top__photo}>
             <label>
-              <img src='./images/vakansii/Mask group.svg' alt="Фото" />
+              <Image
+              src="./images/vakansii/Mask group.svg"
+              alt='Фото'
+              width={40}
+              height={40}/>
               <div>
                 <p>{e.title}</p>
                 <span>{e.online}</span>
@@ -116,7 +119,12 @@ const Vakansii: React.FC = () => {
             </label>
           </div>
           <IconButton aria-label="delete" size="large">
-            <img src="./images/vakansii/bookmark.svg" alt="" />
+            <Image
+              src="/images/vakansii/bookmark.svg"
+              alt='Избранное'
+              className=''
+              width={20}
+              height={20} />
           </IconButton>
         </div>
         <div className={scss.wrapper__middle}>

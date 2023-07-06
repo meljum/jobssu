@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState, useTransition } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import scss from './Vakansii.module.scss'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -8,6 +8,7 @@ import Menu from '@mui/material/Menu';
 import ConstVakansii from '@/constants/vakansii/ConstVakansii'
 import { Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import Image from "next/image";
 const options = [
     'Регионы',
     'Кыргызстан',
@@ -21,7 +22,7 @@ const options = [
 
 function Vakansii() {
     const { t, i18n } = useTranslation();
-    const renderVakansii = ConstVakansii();
+    const renderVakansii = ConstVakansii(arguments);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
     const open = Boolean(anchorEl);
@@ -39,7 +40,7 @@ function Vakansii() {
         setAnchorEl(null);
     };
     return (
-        <div className={scss.wrapper + ' cotnainer'}>
+        <div className={scss.wrapper + ' container'}>
             <div className={scss.wrapper__top}>
                 <div className={scss.top__photo}>
                     <List
@@ -59,7 +60,11 @@ function Vakansii() {
                                 <ListItemText
                                     primary={t("vakansii.rabota")}
                                 />
-                                <img src="./images/vakansii/Vector (2).svg" alt="" />
+                                <Image
+                                    src="/images/vakansii/Vector (2).svg"
+                                    alt="Header Image"
+                                    width={16}
+                                    height={16}/>
                             </label>
                         </ListItem>
                     </List>
