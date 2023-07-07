@@ -153,8 +153,8 @@ const Vakansii: React.FC = () => {
             </IconButton>
         </div>
         <div className={scss.wrapper__middle}>
-          <h1>{e.name}</h1>
-          <p>{e.price} {e.time}</p>
+          <h1>{t("vakansii.title")}</h1>
+          <p>{e.price} {t("vakansii.time")}</p>
           <span>{e.place}</span>
         </div>
         <div className={scss.wrapper__bottom}>
@@ -163,7 +163,7 @@ const Vakansii: React.FC = () => {
         </div>
       </div>
     ))
-  ), [arrVakansii]);
+  ), [arrVakansii,t]);
 
   return <>{renderVakansii}</>;
 };
