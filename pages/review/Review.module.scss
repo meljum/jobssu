@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 0;
+    background: linear-gradient(360deg, rgba(0, 87, 255, 0.05) 68.76%, rgba(0, 87, 255, 0) 101.87%);
+    
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-family: Arial;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 41px;
+        letter-spacing: 0em;
+        text-align: left;
+        @media screen and (max-width: 750px) and (min-width:370px){
+            font-size: 20px;
+            padding: 10px;
+        }
+        @media screen and (max-width: 369px) {
+            font-size: 16px;
+            padding: 5px;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 40px;
+        @media screen and (max-width: 1450px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        @media screen and (max-width: 1450px) and (min-width: 1145px){
+            gap: 185px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

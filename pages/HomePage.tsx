@@ -1,9 +1,11 @@
 import React from 'react'
+import Review from './review/Review'
 
 export default function HomePage() {
   return (
     <div>
-      <h1>Melis</h1>
+      
+      <Review />
     </div>
   )
 }
