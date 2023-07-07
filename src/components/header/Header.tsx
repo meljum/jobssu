@@ -12,6 +12,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOp, setIsDropdownOp] = useState(false);
+  const [isDropdOp, setIsDropdOp] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
   const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
