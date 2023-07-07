@@ -98,7 +98,7 @@ function Vakansii() {
                         ))}
                     </Menu>
                 </div>
-                <Button className={scss.button} variant='contained'>{t("vakansii.vakansii")}</Button>
+                <button className={scss.button}>{t("vakansii.vakansii")}</button>
             </div>
             <div className={scss.wrapper__bottom}>
                 {renderVakansii}

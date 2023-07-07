@@ -1,6 +1,6 @@
 .menu {
     top: 0% !important;
-    left: 19.5% !important;
+    left: 380px !important;
 
     .disabled {
         background-color: black !important;
@@ -44,15 +44,23 @@
         }
 
         button {
+            border: 1px solid ;
             border-radius: 3px;
             background: #0075FF;
-            text-transform: capitalize;
             color: #FFF;
-            font-size: 20px !important;
             font-family: Arial;
+            font-size: 18px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             line-height: normal;
+            padding: 10px 15px;
+        }
+
+        button:active {
+            color: #0057FF;
+            background: transparent;
+            border: 1px solid #0057FF;
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
