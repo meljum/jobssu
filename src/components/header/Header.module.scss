@@ -1,0 +1,425 @@
+@font-face {
+  font-family: "Arial";
+  src: url("/fonts/Arialm.ttf") format("truetype");
+}
+.header {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 9%;
+  .container {
+    width: 100%;
+    display: flex;
+    height: inherit;
+    position: fixed;
+    padding: 0px 32px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    background-color: white;
+
+    p {
+      color: #0057ff;
+      font-size: 18px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .burger {
+      cursor: pointer;
+      margin-left: 33px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      .hr {
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: #0057ff;
+        top: 50px;
+       right: -17px;
+        background-color: #0057ff;
+      }
+
+      .dropdown_content {
+        position: absolute;
+        text-align: start;
+        background-color: white;
+        top: 60px;
+        right: -42px;
+        width: 111px;
+        height: 175px;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        .navLink {
+          margin: 0;
+          opacity: 1;
+        }
+
+        a {
+          position: relative;
+          text-align: start;
+          font-size: 16px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          color: black;
+          padding: 6px 25px;
+          text-decoration: none;
+          display: block;
+          top: 10px;
+          &:hover {
+            color: #0057ff;
+          }
+        }
+      }
+    }
+
+    .vak,
+    .konk {
+      position: relative;
+      font-size: 14px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 400;
+      margin-left: 40px;
+    }
+
+    .blackText {
+      color: #000000;
+    }
+
+    .blackText:hover {
+      color: #0075ff;
+    }
+    .input {
+      display: flex;
+      .main__icon {
+        position: relative;
+        opacity: 1;
+        height: 18px;
+        width: 20px;
+        left: 17%;
+        top: 10px;
+        z-index: 1;
+      }
+      .place {
+        position: relative;
+        left: 2.5%;
+        width: 357px;
+        height: 35px;
+        margin-left: 68px;
+        padding-left: 28px;
+        cursor: pointer;
+        border-right: none !important;
+        border-radius: 3px 0 0 3px;
+        border: 0.3px solid rgba(0, 0, 0, 0.7);
+        background: #fff;
+        outline: none;
+      }
+      .place::placeholder {
+        color: black;
+        opacity: 0.3;
+        color: #aba7a7;
+        font-size: 14px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 400;
+        
+      }
+      .sel {
+        position: relative;
+        width: 100px;
+        height: 38px;
+        margin-left: 14px;
+        cursor: pointer;
+        .dropdownOptions {
+          position: absolute;
+          text-align: start;
+          background-color: white;
+          width: 100px;
+          height: 80px;
+          background: #fff;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border: 0.3px solid rgba(0, 0, 0, 0.7);
+          border-top: none;
+          .dropdownOptionsA {
+            a {
+              position: relative;
+              top: 15px;
+            }
+          }
+          .dropdownOptions_a {
+            padding-top: 10px;
+            text-align: start;
+            a {
+              position: relative;
+              top: 5px;
+            }
+          }
+          a {
+            position: relative;
+            text-align: start;
+            padding: 17px 17px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            &:hover {
+              color: #0057ff;
+              cursor: pointer;
+            }
+          }
+        }
+        .selectedOption {
+          width: 105px;
+          height: 35px;
+          border: 1px solid #3b2e2e;
+
+          a {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: relative;
+            text-align: center;
+            top: 5px;
+          }
+          .ArrowDr {
+            position: relative;
+            left: 5px;
+            top: 6px;
+          }
+        }
+      }
+      .serch {
+        position: relative;
+        color: white;
+        border-radius: 0px 4px 4px 0px;
+        border: 0.3px solid #000;
+        background: #0359ff;
+        text-align: center;
+        border: none;
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 400;
+        a {
+          position: relative;
+          top: 10px;
+        }
+      }
+    }
+    .translate {
+      position: relative;
+      margin-left: 33px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: Arial;
+      font-weight: 400;
+      opacity: 0.800000011920929;
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+    .notific {
+      position: relative;
+      margin-left: 25px;
+      cursor: pointer;
+    }
+   .dropdownMassege {
+      .hr1 {
+        position: relative;
+        right:-20px;
+        top: 27px;
+        width: 43.046px;
+        height: 3px;
+        border-radius: 20px;
+        background: #0057ff;
+      }
+      .dropdownMassege_content {
+        position: absolute;
+        background-color: white;
+        right: 30px;
+        top: 80px;
+        border-radius: 5px;
+        width: 390px;
+        height: 385px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 0.7;
+        .dropMassege {
+          display: inline-block;
+          .divMasseges {
+            display: flex;
+            text-align: start;
+            margin: 10px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+            background-color: white;
+            padding: 15px 13px;
+
+            img {
+              align-items: center;
+              height: 40px;
+              width: 40px;
+              margin: 10px 25px;
+            }
+          }
+        }
+        .btn {
+          width: 131px;
+          height: 30px;
+          border: none;
+          border-radius: 5px;
+          background-color: #0057ff;
+          position: absolute;
+          top: 343px;
+          left: 250px;
+          z-index: 10;
+          cursor: pointer;
+          a {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            top: 5px;
+            font-size: 14px;
+            font-family: Arial;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .masseges {
+      cursor: pointer;
+    }
+    .archive {
+      cursor: pointer;
+    }
+
+    .group179 {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      top: 3px;
+      cursor: pointer;
+    }
+    .dropdownUser_content {
+      position: absolute;
+      left: 80%;
+      top: 80px;
+      width: 280px;
+      height: 255px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      .btn {
+        width: 114px;
+        height: 27px;
+        border-radius: 5px;
+        background: #0057ff;
+        margin: 70px 95px;
+        cursor: pointer;
+        a {
+          position: relative;
+          color: #fff;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          top: 4px;
+        }
+      }
+      .dropdownUser_header {
+        width: 281px;
+        height: 33px;
+        flex-shrink: 0;
+        display: flex;
+        border-radius: 5px 5px 0px 0px;
+        background: #0057ff;
+        display: inline-block;
+        .verticalLine {
+          position: relative;
+          display: inline-block;
+          border-left: 1px solid black;
+          height: 25px;
+          margin: 0px 20px;
+          top: 20px;
+        }
+
+        .seekerActive {
+          color: blue;
+        }
+        .employerActive {
+          color: blue;
+        }
+
+        p {
+          margin-top: 10px;
+          margin-right: -17px;
+          color: #fff;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        a {
+          color: #333;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          position: relative;
+          top: 10px;
+          cursor: pointer;
+        }
+        hr {
+          margin-top: 25px;
+        }
+      }
+      .dropdown_add {
+        position: relative;
+        text-align: start;
+        margin: -25px 25px;
+        p {
+          position: relative;
+          color: #333;
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+          top: 40px;
+          padding: 5px 5px;
+          &:hover {
+            color: blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

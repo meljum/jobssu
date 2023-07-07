@@ -6,32 +6,24 @@ import profilePic from '../../public/images/profilePic.svg'
 import Image from "next/image";
 
 interface reviewCardItem {
-    text:string,
-    btn:string,
-    name:string,
-    info:string,
-    id:number
+    text: string,
+    btn: string,
+    name: string,
+    info: string,
+    id: number
 }
-const ReviewCard: React.FC = () => { 
+const ReviewCard: React.FC = () => {
     const { t } = useTranslation();
     const arrReviewCard: reviewCardItem[] = [
         {
-            id:1,
+            id: 1,
             text: t("review.text"),
             btn: t("review.btn"),
             name: t("review.name"),
             info: t("review.info")
         },
         {
-            id:2,
-        
-            text: t("review.text"),
-            btn: t("review.btn"),
-            name: t("review.name"),
-            info: t("review.info")
-        },
-        {
-            id:3,
+            id: 2,
 
             text: t("review.text"),
             btn: t("review.btn"),
@@ -39,29 +31,39 @@ const ReviewCard: React.FC = () => {
             info: t("review.info")
         },
         {
-            id:4,
+            id: 3,
+
+            text: t("review.text"),
+            btn: t("review.btn"),
+            name: t("review.name"),
+            info: t("review.info")
+        },
+        {
+            id: 4,
             text: t("review.text"),
             btn: t("review.btn"),
             name: t("review.name"),
             info: t("review.info")
         }
     ]
-    const buttons = useMemo(() => {}, [])
+    const buttons = useMemo(() => { }, [])
     const renderReview = useMemo(() => (
-    arrReviewCard.map((e) => (
-        <div className={css.card} key={e.id} >
-            <h1 className={css.text}>{e.text}</h1>
-            <button>{e.btn}</button>
-            <div className={css.profile}>
-                <Image src={profilePic} width={12} height={12} alt='profile'/>
-                <div className={css.user}>
-                    <h1>{e.name}</h1>
-                    <p>{e.info}</p>
+        arrReviewCard.map((e) => (
+            <div className={css.card} key={e.id} >
+                <h1 className={css.text}>{e.text}</h1>
+                <div className={css.btn}><div>
+                    <button>{e.btn}</button>
+                </div></div>
+                <div className={css.profile}>
+                    <Image src={profilePic} width={48} height={48} alt='profile' />
+                    <div className={css.user}>
+                        <h1>{e.name}</h1>
+                        <p>{e.info}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    ) 
-    )),[arrReviewCard])
+        )
+        )), [arrReviewCard])
     return <>{renderReview}</>
 }
 
