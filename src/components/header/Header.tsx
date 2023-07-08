@@ -16,6 +16,29 @@ const Header = () => {
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
   const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/images/header/messages-1.svg");
+  const [image1Src, setImage1Src] = useState(
+    "/images/header/archive-tick1.svg"
+  );
+
+  function change1Image(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/archive-tick1.svg";
+  }
+
+  function restore1Image(
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) {
+    event.currentTarget.src = "/images/header/archive-tick.svg";
+  }
+
+  function changeImage(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/messages-1.svg";
+  }
+
+  function restoreImage(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/messages-2.svg";
+  }
+
   const handleClick = (lang: string | undefined) => {
     i18n.changeLanguage(lang);
   };
@@ -153,7 +176,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className={scss.dropdownOptionsA}>
-                  <Link href="/Сompanies" passHref legacyBehavior>
+                  <Link href="/CompaniesPage" passHref legacyBehavior>
                     <a>Компания</a>
                   </Link>
                 </div>
@@ -201,13 +224,16 @@ const Header = () => {
           <div>
             <Image
               src="/images/header/messages-2.svg"
-              className={scss.messages}
+              className="messages"
               alt="Messages"
               width={25}
               height={25}
+              onMouseOver={changeImage}
+              onMouseOut={restoreImage}
             />
           </div>
         </Link>
+
         <Link href="/FavoritesPage" passHref>
           <div>
             <Image
@@ -216,6 +242,8 @@ const Header = () => {
               alt="Archive"
               width={25}
               height={25}
+              onMouseOver={change1Image}
+              onMouseOut={restore1Image}
             />
           </div>
         </Link>
