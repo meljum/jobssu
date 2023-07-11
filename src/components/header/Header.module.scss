@@ -45,7 +45,7 @@
         border-radius: 20px;
         background: #0057ff;
         top: 50px;
-       right: -17px;
+        right: -17px;
         background-color: #0057ff;
       }
 
@@ -117,10 +117,10 @@
       .place {
         position: relative;
         left: 2.5%;
-        width: 357px;
-        height: 35px;
-        margin-left: 68px;
-        padding-left: 28px;
+        width: 323px;
+        height: 37px;
+        margin-left: 67px;
+        padding-left: 22px;
         cursor: pointer;
         border-right: none !important;
         border-radius: 3px 0 0 3px;
@@ -136,12 +136,11 @@
         font-family: Arial;
         font-style: normal;
         font-weight: 400;
-        
       }
       .sel {
         position: relative;
         width: 100px;
-        height: 38px;
+        height: 37px;
         margin-left: 14px;
         cursor: pointer;
         .dropdownOptions {
@@ -186,8 +185,8 @@
           }
         }
         .selectedOption {
-          width: 105px;
-          height: 35px;
+          width: 100px;
+          height: 37px;
           border: 1px solid #3b2e2e;
 
           a {
@@ -199,25 +198,25 @@
             line-height: normal;
             position: relative;
             text-align: center;
-            top: 5px;
+            top: 7px;
           }
           .ArrowDr {
             position: relative;
             left: 5px;
-            top: 6px;
+            top: 7px;
           }
         }
       }
       .serch {
         position: relative;
         color: white;
-        border-radius: 0px 4px 4px 0px;
+        border-radius: 0px 3px 3px 0px;
         border: 0.3px solid #000;
         background: #0359ff;
         text-align: center;
         border: none;
         width: 100px;
-        height: 35px;
+        height: 37px;
         cursor: pointer;
         font-size: 14px;
         font-family: Arial;
@@ -231,7 +230,7 @@
     }
     .translate {
       position: relative;
-      margin-left: 33px;
+      // margin-left: 29px;
       cursor: pointer;
       font-size: 12px;
       font-family: Arial;
@@ -243,14 +242,11 @@
       }
     }
     .notific {
-      position: relative;
-      margin-left: 25px;
       cursor: pointer;
     }
-   .dropdownMassege {
+    .dropdownMassege {
       .hr1 {
         position: relative;
-        right:-20px;
         top: 27px;
         width: 43.046px;
         height: 3px;
@@ -260,7 +256,7 @@
       .dropdownMassege_content {
         position: absolute;
         background-color: white;
-        right: 30px;
+        right: 10px;
         top: 80px;
         border-radius: 5px;
         width: 390px;
@@ -309,9 +305,6 @@
         }
       }
     }
-    .masseges {
-      cursor: pointer;
-    }
     .archive {
       cursor: pointer;
     }
@@ -325,7 +318,7 @@
     }
     .dropdownUser_content {
       position: absolute;
-      left: 80%;
+      left: 78%;
       top: 80px;
       width: 280px;
       height: 255px;
