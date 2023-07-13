@@ -1,20 +1,19 @@
 {
-    "header": {
-      "title1": "О нас",
-      "title2": "Отзывы",
-      "title3": "Новости",
-      "title4": "Вакансии",
-      "title5": "Помощь",
-      "title6": "Конкурсы",
-      "plaseholder":"Поиск компании, должности или услуг",
-      "plaseholder1":"Поиск"
-    },
-    "vakansii":{
+"vakansii": {
       "podrobnee": "Подробнее",
       "title": "Требуется уборщики в компанию",
       "time": "за час",
       "vakansii": "Все ваканции",
       "rabota": "Работа и вакансии в Бишкеке"
-    }
-  }
-  
+},
+"header": {
+      "heder_aboutUs": "О нас",
+      "heder_reviews": "Отзывы",
+      "heder_news": "Новости",
+      "heder_jobs": "Вакансии",
+      "heder_help": "Помощь",
+      "heder_contests": "Конкурсы",
+      "header_plaseholder": "Поиск компании, должности или услуг",
+      "header_search": "Поиск"
+}
+}

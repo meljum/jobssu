@@ -30,7 +30,6 @@ const Header = () => {
   ) {
     event.currentTarget.src = "/images/header/archive-tick.svg";
   }
-
   function changeImage(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
     event.currentTarget.src = "/images/header/messages-1.svg";
   }
@@ -139,12 +138,12 @@ const Header = () => {
         </div>
         <Link href="/JobsPage" legacyBehavior>
           <a className={`${scss.vak} ${scss.blackText}`}>
-            {t("header.title4")}
+            {t("header.heder_jobs")}
           </a>
         </Link>
         <Link href="/ContestsPage" legacyBehavior>
           <a className={`${scss.konk} ${scss.blackText}`}>
-            {t("header.title6")}
+            {t("header.heder_contests")}
           </a>
         </Link>
         <div className={scss.input}>
@@ -155,11 +154,11 @@ const Header = () => {
           />
           <input
             className={scss.place}
-            placeholder={t("header.plaseholder") || ""}
+            placeholder={t("header.header_plaseholder") || ""}
           />
           <div className={scss.sel}>
             <div className={scss.selectedOption} onClick={toggleDropdown}>
-              <a>{t("header.title4")}</a>
+              <a>{t("header.heder_jobs")}</a>
               <Image
                 className={scss.ArrowDr}
                 src="/images/header/ArrowDropDownIcon.svg"
@@ -184,7 +183,7 @@ const Header = () => {
             )}
           </div>
           <div className={scss.serch}>
-            <a>{t("header.plaseholder1") || ""}</a>
+            <a>{t("header.header_search") || ""}</a>
           </div>
         </div>
         <span
@@ -238,7 +237,6 @@ const Header = () => {
           <div>
             <Image
               src="/images/header/archive-tick.svg"
-              className={scss.archive}
               alt="Archive"
               width={25}
               height={25}
@@ -261,8 +259,6 @@ const Header = () => {
             onClick={handleToggleDropdown}
             style={{
               objectFit: "contain",
-              // width: "auto",
-              // height: "auto",
             }}
           />
           {isDropdownOpen && (
