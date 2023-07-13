@@ -5,8 +5,9 @@
 .header {
   font-family: Arial, sans-serif;
   width: 100%;
+  height: 9%;
   .container {
-    width: 94.7%;
+    width: 100%;
     display: flex;
     height: inherit;
     position: fixed;
@@ -16,7 +17,7 @@
     text-align: center;
     color: black;
     background-color: white;
-    box-shadow: 0px 9px 16px 0px rgba(0, 0, 0, 0.2);
+
     p {
       color: #0057ff;
       font-size: 18px;
@@ -31,6 +32,7 @@
 
     .burger {
       cursor: pointer;
+      margin-left: 33px;
     }
     .dropdown {
       position: relative;
@@ -43,7 +45,7 @@
         border-radius: 20px;
         background: #0057ff;
         top: 50px;
-        left: -20px;
+        right: -17px;
         background-color: #0057ff;
       }
 
@@ -55,7 +57,6 @@
         right: -42px;
         width: 111px;
         height: 175px;
-        flex-shrink: 0;
         border-radius: 5px;
         background: #fff;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -92,6 +93,7 @@
       font-family: Arial;
       font-style: normal;
       font-weight: 400;
+      margin-left: 40px;
     }
 
     .blackText {
@@ -105,24 +107,26 @@
       display: flex;
       .main__icon {
         position: relative;
-        opacity: 0.7;
-        height: 20px;
-        width: 25px;
-        left: 8%;
-        top: 9px;
+        opacity: 1;
+        height: 18px;
+        width: 20px;
+        left: 17%;
+        top: 10px;
         z-index: 1;
       }
       .place {
         position: relative;
         left: 2.5%;
-        width: 319px;
-        height: 32.8px;
-        padding-left: 40px;
+        width: 323px;
+        height: 37px;
+        margin-left: 67px;
+        padding-left: 22px;
         cursor: pointer;
         border-right: none !important;
         border-radius: 3px 0 0 3px;
         border: 0.3px solid rgba(0, 0, 0, 0.7);
         background: #fff;
+        outline: none;
       }
       .place::placeholder {
         color: black;
@@ -135,18 +139,78 @@
       }
       .sel {
         position: relative;
-        width: 105px;
+        width: 100px;
         height: 37px;
-        margin-left: 15px;
+        margin-left: 14px;
         cursor: pointer;
-        option {
-          color: blue;
+        .dropdownOptions {
+          position: absolute;
+          text-align: start;
+          background-color: white;
+          width: 100px;
+          height: 80px;
+          background: #fff;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border: 0.3px solid rgba(0, 0, 0, 0.7);
+          border-top: none;
+          .dropdownOptionsA {
+            a {
+              position: relative;
+              top: 15px;
+            }
+          }
+          .dropdownOptions_a {
+            padding-top: 10px;
+            text-align: start;
+            a {
+              position: relative;
+              top: 5px;
+            }
+          }
+          a {
+            position: relative;
+            text-align: start;
+            padding: 17px 17px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            &:hover {
+              color: #0057ff;
+              cursor: pointer;
+            }
+          }
+        }
+        .selectedOption {
+          width: 100px;
+          height: 37px;
+          border: 1px solid #3b2e2e;
+
+          a {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: relative;
+            text-align: center;
+            top: 7px;
+          }
+          .ArrowDr {
+            position: relative;
+            left: 5px;
+            top: 7px;
+          }
         }
       }
       .serch {
         position: relative;
         color: white;
-        border-radius: 0px 4px 4px 0px;
+        border-radius: 0px 3px 3px 0px;
         border: 0.3px solid #000;
         background: #0359ff;
         text-align: center;
@@ -166,8 +230,7 @@
     }
     .translate {
       position: relative;
-      padding-left: 33.9px;
-      padding-right: 25.1px;
+      // margin-left: 29px;
       cursor: pointer;
       font-size: 12px;
       font-family: Arial;
@@ -179,16 +242,12 @@
       }
     }
     .notific {
-      position: relative;
-      top: 3px;
       cursor: pointer;
     }
-
     .dropdownMassege {
       .hr1 {
-        position: absolute;
-        margin-left: -7px;
-        top: 73px;
+        position: relative;
+        top: 27px;
         width: 43.046px;
         height: 3px;
         border-radius: 20px;
@@ -197,8 +256,8 @@
       .dropdownMassege_content {
         position: absolute;
         background-color: white;
-        right: 70px;
-        top: 85px;
+        right: 10px;
+        top: 80px;
         border-radius: 5px;
         width: 390px;
         height: 385px;
@@ -246,9 +305,6 @@
         }
       }
     }
-    .masseges {
-      cursor: pointer;
-    }
     .archive {
       cursor: pointer;
     }
@@ -263,7 +319,7 @@
     .dropdownUser_content {
       position: absolute;
       left: 78%;
-      top: 77px;
+      top: 80px;
       width: 280px;
       height: 255px;
       border-radius: 5px;
@@ -274,7 +330,7 @@
         height: 27px;
         border-radius: 5px;
         background: #0057ff;
-        margin: 25px 95px;
+        margin: 70px 95px;
         cursor: pointer;
         a {
           position: relative;
@@ -299,9 +355,9 @@
           position: relative;
           display: inline-block;
           border-left: 1px solid black;
-          height: 20px;
+          height: 25px;
           margin: 0px 20px;
-          top: 10px;
+          top: 20px;
         }
 
         .seekerActive {
@@ -312,7 +368,8 @@
         }
 
         p {
-          margin-top: 7px;
+          margin-top: 10px;
+          margin-right: -17px;
           color: #fff;
           font-size: 14px;
           font-family: Arial;
@@ -328,17 +385,19 @@
           font-weight: 400;
           line-height: normal;
           position: relative;
+          top: 10px;
           cursor: pointer;
         }
         hr {
-          margin-top: 15px;
+          margin-top: 25px;
         }
       }
       .dropdown_add {
         position: relative;
         text-align: start;
-        margin: -15px 25px;
+        margin: -25px 25px;
         p {
+          position: relative;
           color: #333;
           font-size: 14px;
           font-family: Arial;
@@ -346,6 +405,8 @@
           font-weight: 400;
           line-height: normal;
           cursor: pointer;
+          top: 40px;
+          padding: 5px 5px;
           &:hover {
             color: blue;
             cursor: pointer;
