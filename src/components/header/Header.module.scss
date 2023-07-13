@@ -105,12 +105,13 @@
     }
     .input {
       display: flex;
+      margin-left: 40px;
       .main__icon {
         position: relative;
         opacity: 1;
         height: 18px;
         width: 20px;
-        left: 17%;
+        left: 7%;
         top: 10px;
         z-index: 1;
       }
@@ -119,7 +120,7 @@
         left: 2.5%;
         width: 323px;
         height: 37px;
-        margin-left: 67px;
+        // margin-left: 60px;
         padding-left: 22px;
         cursor: pointer;
         border-right: none !important;
