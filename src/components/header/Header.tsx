@@ -259,8 +259,6 @@ const Header = () => {
             onClick={handleToggleDropdown}
             style={{
               objectFit: "contain",
-              // width: "auto",
-              // height: "auto",
             }}
           />
           {isDropdownOpen && (
