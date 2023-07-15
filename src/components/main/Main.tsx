@@ -8,22 +8,22 @@ const Main = () => {
                 любой работы</h1>
 
             <div className={scss.cercles}>
-                <img src="/images/main/cercle1.svg" alt="" />
-                <img src="/images/main/cercle2.svg" alt="" />
-                <img src="/images/main/cercle3.svg" alt="" />
+                <img src="/images/main/cercle11.svg" alt="" />
+                <img src="/images/main/cercle22.svg" alt="" />
+                <img src="/images/main/cercle33.svg" alt="" />
             </div>
 
             <div className={scss.text}>
                 <div>
-                    <h2>860</h2>
+                    <h2>860 +</h2>
                     <p>Вакансии</p>
                 </div>
                 <div>
-                    <h2>29 345</h2>
+                    <h2>29 345 +</h2>
                     <p>Резюме</p>
                 </div>
                 <div>
-                    <h2>1 987</h2>
+                    <h2>1 987 +</h2>
                     <p>Компаний </p>
                 </div>
             </div>
@@ -33,6 +33,7 @@ const Main = () => {
                 <div className={scss.wave__two}></div>
                 <div className={scss.wave__three}></div>
             </div>
+
         </div>
     )
 }

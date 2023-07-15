@@ -4,25 +4,28 @@
 }
 
 .wrapper {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ),url(../../../public/images/main/Background.svg);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 23, 67, 0.8)), url(../../../public/images/main/back.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    background-position: center;
+    height: 586px;
+    width: 100.5%;
 
     .text {
         position: absolute;
         z-index: 6;
-        top: 410px;
-        left: 356px;
+        top: 370px;
+        left: 370px;
         display: flex;
         flex-direction: row;
-        gap: 139px;
+        gap: 150px;
         text-align: center;
 
         div {
             display: flex;
             flex-direction: column;
             gap: 4px;
+
             p {
                 font-family: Arial;
                 font-size: 22px;
@@ -49,13 +52,12 @@
 
     .cercles {
         position: absolute;
-        top: 410px;
+        top: 350px;
         left: 332px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 90px;
-        
         z-index: 5;
     }
 
@@ -68,6 +70,7 @@
         color: #ffffff;
         padding-top: 181px;
         z-index: 6;
+        padding-top: 161px;
     }
 }
 
@@ -75,31 +78,31 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    top: 134px;
+    top: 148px;
 
     &__one {
         position: absolute;
-        background-image: url(../../../public/images/main/Wave1.svg);
+        background: url(../../../public/images/main/wave.svg) repeat-x;
         width: 7000px;
         height: 106px;
-        animation: waves 13s infinite linear;
+        animation: waves 20s infinite linear;
     }
 
     &__two {
-        background-image: url(../../../public/images/main/Wave2.svg);
+        background: url(../../../public/images/main/wave33.svg) repeat-x;
         width: 7000px;
         height: 106px;
-        animation: waves2 16s infinite linear;
+        animation: waves2 15s infinite linear;
 
     }
 
     &__three {
         position: absolute;
         top: 0;
-        background-image: url(../../../public/images/main/Wave3.svg);
+        background: url(../../../public/images/main/wave22.svg) repeat-x;
         width: 7000px;
         height: 106px;
-        animation: waves2 8s infinite linear;
+        animation: waves2 10s infinite linear;
 
 
     }
@@ -110,21 +113,115 @@
 
 @keyframes waves {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-969px);
+        /* половина от -1938px */
     }
 
     100% {
-        margin-left: -1938px;
+        transform: translateX(-1938px);
     }
 }
 
 @keyframes waves2 {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-940px);
+        /* половина от -1880px */
     }
 
     100% {
-        margin-left: -1880px;
+        transform: translateX(-1880px);
     }
+}
 
+@media (max-width: 1024px) {
+    .wrapper {
+        height: 700px;
+        width: 1300px;
+
+        h1 {
+            font-size: 58px;
+        }
+
+
+        .cercles {
+            width: 690px;
+            height: 205px;
+            top: 430px;
+        }
+
+        .wave {
+            top: 262px;
+        }
+
+        .text {
+            gap: 171px;
+            top: 455px;
+            left: 335px;
+
+            div {
+                p {
+                    font-size: 25px;
+                }
+
+                h2 {
+                    font-size: 31px;
+
+                }
+            }
+        }
+
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 572px;
+        width: 941px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .wave {
+            top: 137px;
+        }
+
+        .bg {
+            width: 122%;
+        }
+
+        .cercles {
+            width: 316px;
+            height: 180px;
+            top: 350px;
+        }
+
+        .text {
+            gap: 156px;
+            top: 370px;
+            left: 159px;
+
+            div {
+                p {
+                    font-size: 28px;
+                }
+
+                h2 {
+                    font-size: 24px;
+
+                }
+            }
+        }
+
+    }
 }
