@@ -12,9 +12,32 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOp, setIsDropdownOp] = useState(false);
+  const [isDropdOp, setIsDropdOp] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
   const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/images/header/messages-1.svg");
+  const [image1Src, setImage1Src] = useState(
+    "/images/header/archive-tick1.svg"
+  );
+
+  function change1Image(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/archive-tick1.svg";
+  }
+
+  function restore1Image(
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) {
+    event.currentTarget.src = "/images/header/archive-tick.svg";
+  }
+  function changeImage(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/messages-1.svg";
+  }
+
+  function restoreImage(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    event.currentTarget.src = "/images/header/messages-2.svg";
+  }
+
   const handleClick = (lang: string | undefined) => {
     i18n.changeLanguage(lang);
   };
@@ -115,12 +138,12 @@ const Header = () => {
         </div>
         <Link href="/JobsPage" legacyBehavior>
           <a className={`${scss.vak} ${scss.blackText}`}>
-            {t("header.title4")}
+            {t("header.heder_jobs")}
           </a>
         </Link>
         <Link href="/ContestsPage" legacyBehavior>
           <a className={`${scss.konk} ${scss.blackText}`}>
-            {t("header.title6")}
+            {t("header.heder_contests")}
           </a>
         </Link>
         <div className={scss.input}>
@@ -131,16 +154,13 @@ const Header = () => {
           />
           <input
             className={scss.place}
-            placeholder={t("header.plaseholder") || ""}
+            placeholder={t("header.header_plaseholder") || ""}
           />
           <div className={scss.sel}>
-            <div className={scss.selectedOption}>
-              <Link href="/JobsPage" passHref legacyBehavior>
-                <a>{t("header.title4")}</a>
-              </Link>
+            <div className={scss.selectedOption} onClick={toggleDropdown}>
+              <a>{t("header.heder_jobs")}</a>
               <Image
                 className={scss.ArrowDr}
-                onClick={toggleDropdown}
                 src="/images/header/ArrowDropDownIcon.svg"
                 alt="Dropdown Icon"
                 width={11}
@@ -155,7 +175,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className={scss.dropdownOptionsA}>
-                  <Link href="/Сompanies" passHref legacyBehavior>
+                  <Link href="/CompaniesPage" passHref legacyBehavior>
                     <a>Компания</a>
                   </Link>
                 </div>
@@ -163,7 +183,7 @@ const Header = () => {
             )}
           </div>
           <div className={scss.serch}>
-            <a>{t("header.plaseholder1") || ""}</a>
+            <a>{t("header.header_search") || ""}</a>
           </div>
         </div>
         <span
@@ -199,20 +219,32 @@ const Header = () => {
             </>
           )}
         </div>
-        <Image
-          src="/images/header/messages-2.svg"
-          className={scss.masseges}
-          alt="Messages"
-          width={25}
-          height={25}
-        />
-        <Image
-          src="/images/header/archive-tick.svg"
-          className={scss.archive}
-          alt="Archive"
-          width={25}
-          height={25}
-        />
+        <Link href="/NotificationsPage" passHref>
+          <div>
+            <Image
+              src="/images/header/messages-2.svg"
+              className="messages"
+              alt="Messages"
+              width={25}
+              height={25}
+              onMouseOver={changeImage}
+              onMouseOut={restoreImage}
+            />
+          </div>
+        </Link>
+
+        <Link href="/FavoritesPage" passHref>
+          <div>
+            <Image
+              src="/images/header/archive-tick.svg"
+              alt="Archive"
+              width={25}
+              height={25}
+              onMouseOver={change1Image}
+              onMouseOut={restore1Image}
+            />
+          </div>
+        </Link>
         <div className={scss.dropdown_user}>
           <Image
             src={
@@ -227,8 +259,6 @@ const Header = () => {
             onClick={handleToggleDropdown}
             style={{
               objectFit: "contain",
-              width: "auto",
-              height: "auto",
             }}
           />
           {isDropdownOpen && (
