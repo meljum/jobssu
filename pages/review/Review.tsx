@@ -4,16 +4,18 @@ import useReviewCard from '../review/ReviewCard'
 import { useTranslation } from 'react-i18next';
 
 function Review() {
-    const renderReviewCard = useReviewCard(arguments)
-    const { t } = useTranslation();
+  const renderReviewCard = useReviewCard(arguments)
+  const { t } = useTranslation();
 
   return (
     <div className={css.main}>
-    <h1>{t("review.title")}</h1>
-    <div className={css.wrapper}>
-        
-        {renderReviewCard}
-    </div>
+      <div className='container'>
+        <h1 className={css.title}>{t("review.title")}</h1>
+        <div className={css.wrapper}>
+          {renderReviewCard}
+        </div>
+      </div>
+
     </div>
   )
 }
