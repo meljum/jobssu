@@ -3,6 +3,7 @@ import { useMemo, useState, useTransition } from 'react'
 import { IconButton, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image'
+import Link from 'next/link';
 
 interface VakansiiItem {
   title: string;
@@ -134,23 +135,23 @@ const Vakansii: React.FC = () => {
             </label>
           </div>
           <IconButton
-              aria-label="delete"
-              size="large"
-              onClick={() => handleClick(e.id)}
-            >
-              <Image
-                key={e.id}
-                src={
-                  e.selected
-                    ? './images/SectionIcon/bookmark2.svg'
-                    : './images/SectionIcon/bookmark.svg'
-                }
-                alt="Избранное"
-                className=""
-                width={20}
-                height={20}
-              />
-            </IconButton>
+            aria-label="delete"
+            size="large"
+            onClick={() => handleClick(e.id)}
+          >
+            <Image
+              key={e.id}
+              src={
+                e.selected
+                  ? './images/SectionIcon/bookmark2.svg'
+                  : './images/SectionIcon/bookmark.svg'
+              }
+              alt="Избранное"
+              className=""
+              width={20}
+              height={20}
+            />
+          </IconButton>
         </div>
         <div className={scss.wrapper__middle}>
           <h1>{t("vakansii.title")}</h1>
@@ -159,11 +160,14 @@ const Vakansii: React.FC = () => {
         </div>
         <div className={scss.wrapper__bottom}>
           <span>{e.date}</span>
-          <button className={scss.button}>{t("vakansii.podrobnee")}</button>
+          <Link href='/AllVakansies' legacyBehavior>
+
+            <button className={scss.button}>{t("vakansii.podrobnee")}</button>
+          </Link>
         </div>
       </div>
     ))
-  ), [arrVakansii,t]);
+  ), [arrVakansii, t]);
 
   return <>{renderVakansii}</>;
 };
