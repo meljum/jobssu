@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Arial";
+    src: url("/fonts/Arialm.ttf") format("truetype");
+  }
 .menu {
     top: 0% !important;
     left: 365px !important;
@@ -22,10 +26,10 @@
     color: none;
 }
 .wrapper {
+    font-family: Arial, sans-serif;
     .regions {
         color: #000;
         font-size: 20px;
-        font-family: Arial;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -46,7 +50,6 @@
                     margin-right: 7px;
                     color: #333;
                     font-size: 32px;
-                    font-family: Arial;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
@@ -59,7 +62,6 @@
             border-radius: 3px;
             background: #0075FF;
             color: #FFF;
-            font-family: Arial;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -77,7 +79,6 @@
         h1 {
             color: #333;
             font-size: 32px;
-            font-family: Arial;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
