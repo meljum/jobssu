@@ -126,6 +126,7 @@ function Vakansii() {
                     fontSize: index === 0 ? '20px' : '16px',
                     fontWeight: index === 0 ? '700' : '400',
                     fontFamily: "Arial",
+                    padding: '0px 16px',
                     paddingBottom: index === options.length - 1 ? '0px' : '',
                   }}
                   disabled={index === 0}
