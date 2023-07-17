@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Arial";
+    src: url("/fonts/Arialm.ttf") format("truetype");
+  }
+.menu {
+    top: 0% !important;
+    left: 365px !important;
+    .disabled {
+        background-color: black !important;
+    }
+}
+.lastItem {
+  position: relative;
+}
+
+.lastItem::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+  width: 77%;
+  height: 1px;
+  background-color: blue;
+}
+.border{
+    color: none;
+}
+.wrapper {
+    font-family: Arial, sans-serif;
+    .regions {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .wrapper__top {
+        margin-bottom: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .top__photo {
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                :nth-child(1) {
+                    margin-right: 7px;
+                    color: #333;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+
+        button {
+            border: 1px solid ;
+            border-radius: 3px;
+            background: #0075FF;
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding: 10px 15px;
+        }
+
+        button:active {
+            color: #0057FF;
+            background: transparent;
+            border: 1px solid #0057FF;
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+    .wrapper__bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px 30px;
+    }
+    button{
+        cursor: pointer;
+    }
+}
+
+.menu__paper {
+    max-height: 300px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+  }
+  
+  .menu__content {
+    padding-right: 16px; /* Add space for scrollbar */
+  }
