@@ -8,17 +8,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 586px;
-    width: 100.5%;
+    height: 629px;
+    width: 100%;
 
     .text {
         position: absolute;
-        z-index: 6;
-        top: 370px;
-        left: 370px;
+        left: 50.5%;
+        transform: translate(-50%, 250%);
         display: flex;
         flex-direction: row;
-        gap: 150px;
+        gap: 166px;
         text-align: center;
 
         div {
@@ -28,37 +27,39 @@
 
             p {
                 font-family: Arial;
-                font-size: 22px;
+                font-size: 19px;
                 font-weight: 400;
+                line-height: 22px;
                 letter-spacing: 0em;
                 text-align: center;
                 color: #ffffff;
-                height: 0;
+
 
             }
 
             h2 {
                 font-family: Arial;
-                font-size: 32px;
+                font-size: 28px;
                 font-weight: 700;
-                line-height: 70px;
+                line-height: 32px;
                 letter-spacing: 0em;
                 text-align: center;
                 color: #ffffff;
-                height: 0;
             }
         }
     }
 
     .cercles {
         position: absolute;
-        top: 350px;
-        left: 332px;
+        top: 463px;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 90px;
-        z-index: 5;
+        z-index: 2;
+
     }
 
     h1 {
@@ -69,7 +70,6 @@
         text-align: center;
         color: #ffffff;
         padding-top: 181px;
-        z-index: 6;
         padding-top: 160px;
     }
 }
@@ -78,7 +78,8 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    top: 148px;
+    top: 230px;
+
 
     &__one {
         position: absolute;
@@ -118,7 +119,6 @@
 
     50% {
         transform: translateX(-969px);
-        /* половина от -1938px */
     }
 
     100% {
@@ -133,7 +133,6 @@
 
     50% {
         transform: translateX(-940px);
-        /* половина от -1880px */
     }
 
     100% {
@@ -141,42 +140,30 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1248px) {
     .wrapper {
-        height: 700px;
-        width: 1300px;
 
-        h1 {
-            font-size: 58px;
-        }
+
+        // h1 {
+        //     font-size: 58px;
+        // }
 
 
         .cercles {
-            width: 690px;
-            height: 205px;
-            top: 430px;
-        }
-
-        .wave {
-            top: 262px;
+            width: 365px;
+            height: 173px;
         }
 
         .text {
-            gap: 171px;
-            top: 455px;
-            left: 335px;
+            transform: translate(-50%, 245%);
+            gap: 150px;
 
             div {
-                p {
-                    font-size: 25px;
-                }
-
-                h2 {
-                    font-size: 31px;
-
-                }
+                width: 110px;
             }
+
         }
+
 
 
     }
@@ -185,43 +172,37 @@
 
 @media (max-width: 768px) {
     .wrapper {
-        height: 572px;
-        width: 941px;
 
-        h1 {
-            font-size: 50px;
-        }
-
-        .wave {
-            top: 137px;
-        }
-
-        .bg {
-            width: 122%;
-        }
 
         .cercles {
-            width: 316px;
-            height: 180px;
-            top: 350px;
+            height: 150px;
+            width: 150px;
+            left: 30%;
+            transform: translate(50%, -50%);
+
+        }
+
+        h1{
+            font-size: 48px;
         }
 
         .text {
-            gap: 156px;
-            top: 370px;
-            left: 159px;
+            left: 50%;
+            transform: translate(-51%, 245%);
+            gap: 130px;
 
             div {
-                p {
-                    font-size: 28px;
+                h2 {
+                    font-size: 22px;
                 }
 
-                h2 {
-                    font-size: 24px;
-
+                p {
+                    font-size: 18px;
                 }
             }
+
         }
+
 
     }
 }
