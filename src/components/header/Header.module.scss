@@ -11,7 +11,7 @@
     display: flex;
     height: inherit;
     position: fixed;
-    padding: 0px 32px;
+    padding: 0px 112px;
     align-items: center;
     justify-content: space-between;
     text-align: center;
@@ -32,7 +32,8 @@
 
     .burger {
       cursor: pointer;
-      margin-left: 33px;
+      margin-left: 32.9px;
+      color: #000000;
     }
     .dropdown {
       position: relative;
@@ -44,7 +45,7 @@
         flex-shrink: 0;
         border-radius: 20px;
         background: #0057ff;
-        top: 50px;
+        top: 40px;
         right: -17px;
         background-color: #0057ff;
       }
@@ -105,14 +106,11 @@
     }
     .input {
       display: flex;
-      margin-left: 40px;
+      margin-left: 60px;
       .main__icon {
         position: relative;
         opacity: 1;
-        height: 18px;
-        width: 20px;
-        left: 7%;
-        top: 10px;
+        left: 6.5%;
         z-index: 1;
       }
       .place {
@@ -120,12 +118,11 @@
         left: 2.5%;
         width: 323px;
         height: 37px;
-        // margin-left: 60px;
-        padding-left: 22px;
+        padding-left: 26px;
         cursor: pointer;
         border-right: none !important;
         border-radius: 3px 0 0 3px;
-        border: 0.3px solid rgba(0, 0, 0, 0.7);
+        border: 0.3px solid rgba(0, 0, 0, 0.70);
         background: #fff;
         outline: none;
       }
@@ -188,7 +185,7 @@
         .selectedOption {
           width: 100px;
           height: 37px;
-          border: 1px solid #3b2e2e;
+          border: 0.3px solid rgba(0, 0, 0, 0.7);
 
           a {
             color: rgba(0, 0, 0, 0.8);
@@ -204,7 +201,7 @@
           .ArrowDr {
             position: relative;
             left: 5px;
-            top: 7px;
+            top: 8px;
           }
         }
       }
@@ -212,7 +209,7 @@
         position: relative;
         color: white;
         border-radius: 0px 3px 3px 0px;
-        border: 0.3px solid #000;
+        border: 0.3px solid rgba(0, 0, 0, 0.7);
         background: #0359ff;
         text-align: center;
         border: none;
@@ -231,15 +228,18 @@
     }
     .translate {
       position: relative;
-      // margin-left: 29px;
+      margin-left: 29px;
+      opacity: 0.4000000059604645;
       cursor: pointer;
+      color: #000;
       font-size: 12px;
       font-family: Arial;
       font-weight: 400;
-      opacity: 0.800000011920929;
+     
       &:hover {
         color: blue;
         cursor: pointer;
+        opacity: 0.800000011920929;
       }
     }
     .notific {
@@ -312,10 +312,10 @@
 
     .group179 {
       position: relative;
-      width: 45px;
-      height: 45px;
       top: 3px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       cursor: pointer;
+      border-radius: 35px;
     }
     .dropdownUser_content {
       position: absolute;

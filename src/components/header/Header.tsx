@@ -154,7 +154,7 @@ const Header = () => {
           />
           <input
             className={scss.place}
-            placeholder={t("header.header_plaseholder") || ""}
+            placeholder={t("header.header_placeholder") || ""}
           />
           <div className={scss.sel}>
             <div className={scss.selectedOption} onClick={toggleDropdown}>
@@ -254,7 +254,7 @@ const Header = () => {
             }
             className={scss.group179}
             alt="Group 179"
-            width={35}
+            width={45}
             height={45}
             onClick={handleToggleDropdown}
             style={{
