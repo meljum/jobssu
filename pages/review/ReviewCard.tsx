@@ -51,9 +51,9 @@ const ReviewCard: React.FC = () => {
         arrReviewCard.map((e) => (
             <div className={css.card} key={e.id} >
                 <h1 className={css.text}>{e.text}</h1>
-                <div className={css.btn}><div>
+                <div className={css.btn}>
                     <button>{e.btn}</button>
-                </div></div>
+                </div>
                 <div className={css.profile}>
                     <Image src={profilePic} width={48} height={48} alt='profile' />
                     <div className={css.user}>
