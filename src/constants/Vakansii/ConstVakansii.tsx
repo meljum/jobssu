@@ -1,4 +1,4 @@
-import scss from './ConstVakansii.module.scss'
+import scss from '../../components/vakansii/ConstVakansii.module.scss'
 import { useMemo, useState, useTransition } from 'react'
 import { IconButton, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
