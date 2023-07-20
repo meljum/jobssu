@@ -9,11 +9,8 @@ export default function Home() {
   return (
     <>
       <Header />
-<<<<<<< HEAD
       <Review />
-=======
       <Main/>
->>>>>>> 2463908b622369bacc39bd80c1b6d971ad1f5530
       <Section/>
       <Vakansii/>
     </>
