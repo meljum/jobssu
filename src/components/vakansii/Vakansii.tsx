@@ -139,7 +139,7 @@ function Vakansii() {
             </div>
           </Menu>
         </div>
-        <Link href='/VakansiesMore' legacyBehavior>
+        <Link href='/AllVakansies' legacyBehavior>
           <button className={scss.button}>{t("vakansii.vakansii")}</button>
         </Link>
       </div>

@@ -160,7 +160,7 @@ const Vakansii: React.FC = () => {
         </div>
         <div className={scss.wrapper__bottom}>
           <span>{e.date}</span>
-          <Link href='/AllVakansies' legacyBehavior>
+          <Link href='/VakansiesMore' legacyBehavior>
 
             <button className={scss.button}>{t("vakansii.podrobnee")}</button>
           </Link>
