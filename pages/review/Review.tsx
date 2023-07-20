@@ -8,8 +8,9 @@ function Review() {
   const { t } = useTranslation();
 
   return (
+    <div className='container'>
     <div className={css.main}>
-      <div className='container'>
+      
         <h1 className={css.title}>{t("review.title")}</h1>
         <div className={css.wrapper}>
           {renderReviewCard}

@@ -31,11 +31,12 @@
     .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 28px;
+        gap: 80px;
         
         @media screen and  (max-width :700px){
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            grid-template-columns: 1fr;
+            width: 85%;
         }
         @media screen and (max-width: 1145px)and (min-width :700px){
             display: grid;
