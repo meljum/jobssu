@@ -39,10 +39,9 @@ function Vakansii() {
   const handleMenuItemClick = (event: MouseEvent<HTMLElement>, index: number) => {
     let selectedOptionWithoutSoftSign = options[index].replace("ь", "");
 
-    // Check if the selected option is the language option
     if (selectedOptionWithoutSoftSign === t("vakansii.rabota")) {
       setDisableSoftSign(true);
-      selectedOptionWithoutSoftSign = t("vakansii.rabota"); // Set the language translation as it is without the letter "е"
+      selectedOptionWithoutSoftSign = t("vakansii.rabota");
     } else {
       setDisableSoftSign(false);
     }
@@ -139,7 +138,7 @@ function Vakansii() {
             </div>
           </Menu>
         </div>
-        <Link href='/AllVakansies' legacyBehavior>
+        <Link href='/JobsPage' legacyBehavior>
           <button className={scss.button}>{t("vakansii.vakansii")}</button>
         </Link>
       </div>
