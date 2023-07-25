@@ -15,11 +15,12 @@ const Header = () => {
   const [isDropdOp, setIsDropdOp] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
+  // const [isEmployerClicked, setisEmployerClicked] = useState(false);
   const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
-  const [imageSrc, setImageSrc] = useState("/images/header/messages-1.svg");
-  const [image1Src, setImage1Src] = useState(
-    "/images/header/archive-tick1.svg"
-  );
+  // const [imageSrc, setImageSrc] = useState("/images/header/messages-1.svg");
+  // const [image1Src, setImage1Src] = useState(
+  //   "/images/header/archive-tick1.svg"
+  // );
 
   function change1Image(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
     event.currentTarget.src = "/images/header/archive-tick1.svg";
@@ -72,7 +73,7 @@ const Header = () => {
   const renderLinks = useMemo(() => {
     return links.map((item) => (
       <Link key={item.id} href={item.to} legacyBehavior>
-        <a className={scss.navLink}>{t(item.label) || ""}</a>
+        <p className={scss.navLink}>{t(item.label) || ""}</p>
       </Link>
     ));
   }, [t]);
@@ -87,7 +88,7 @@ const Header = () => {
             width={24}
             height={24}
           />
-          {item.title}
+          <p> {item.title}</p>
         </div>
       )),
     []
@@ -104,7 +105,7 @@ const Header = () => {
 
   const dropdownItemsJSX = useMemo(() => {
     return dropdownItems.map((item, index) => (
-      <Link key={index} href={item.href} passHref>
+      <Link key={index} href={item.href} legacyBehavior>
         <p>{item.label}</p>
       </Link>
     ));
@@ -137,14 +138,14 @@ const Header = () => {
           )}
         </div>
         <Link href="/JobsPage" legacyBehavior>
-          <a className={`${scss.vak} ${scss.blackText}`}>
+          <p className={`${scss.vak} ${scss.blackText}`}>
             {t("header.heder_jobs")}
-          </a>
+          </p>
         </Link>
         <Link href="/ContestsPage" legacyBehavior>
-          <a className={`${scss.konk} ${scss.blackText}`}>
+          <p className={`${scss.konk} ${scss.blackText}`}>
             {t("header.heder_contests")}
-          </a>
+          </p>
         </Link>
         <div className={scss.input}>
           <img
@@ -169,14 +170,14 @@ const Header = () => {
             </div>
             {isSelDropdownOpen && (
               <div className={scss.dropdownOptions}>
-                <div className={scss.dropdownOptions_a}>
+                <div className={scss.dropdownOptions_p}>
                   <Link href="/JobsPage" passHref legacyBehavior>
-                    <a>Резюме</a>
+                    <p>Резюме</p>
                   </Link>
                 </div>
-                <div className={scss.dropdownOptionsA}>
+                <div className={scss.dropdownOptionsP}>
                   <Link href="/CompaniesPage" passHref legacyBehavior>
-                    <a>Компания</a>
+                    <p>Компания</p>
                   </Link>
                 </div>
               </div>
@@ -212,7 +213,7 @@ const Header = () => {
                 <div className={scss.dropMassege}>{renderMasseges}</div>
                 <div className={scss.btn}>
                   <Link href="/NotificationsPage" passHref legacyBehavior>
-                    <a>Посмотрите все</a>
+                    <p>Посмотрите все</p>
                   </Link>
                 </div>
               </div>
@@ -269,27 +270,31 @@ const Header = () => {
           {isDropdownOpen && (
             <div className={scss.dropdownUser_content}>
               <div className={scss.dropdownUser_header}>
-                <p>User_name</p>
-                <a
-                  className={isEmployer ? scss.employerActive : ""}
-                  onClick={() => handleToggleUserType(true)}
-                >
-                  Работодатель
-                </a>{" "}
-                <hr className={scss.verticalLine} />{" "}
-                <a
-                  className={isSeeker ? scss.seekerActive : ""}
-                  onClick={() => handleToggleUserType(false)}
-                >
-                  Соискатель
-                </a>
+                <h5>User_name</h5>
+                <div className={scss.dropdownUser_h6}>
+                  <h6
+                    className={isEmployer ? scss.employerActive : ""}
+                    onClick={() => handleToggleUserType(true)}
+                  >
+                    Работодатель
+                  </h6>{" "}
+                  <hr className={scss.verticalLine} />{" "}
+                  <h6
+                    className={`${isSeeker ? scss.seekerActive : ""} ${
+                      scss.seekerLabel
+                    }`}
+                    onClick={() => handleToggleUserType(false)}
+                  >
+                    Соискатель
+                  </h6>
+                </div>
                 <hr />
               </div>
               <div className={isSeeker ? scss.dropdown_add : scss.dropdown_add}>
                 {dropdownItemsJSX}
               </div>
               <div className={scss.btn}>
-                <a onClick={handleLogout}>Выйти</a>
+                <p onClick={handleLogout}>Выйти</p>
               </div>
             </div>
           )}

@@ -27,7 +27,7 @@
       font-weight: 900;
     }
 
-    a {
+    p {
       text-decoration: none;
     }
 
@@ -46,7 +46,7 @@
         flex-shrink: 0;
         border-radius: 20px;
         background: #0057ff;
-        top: 40px;
+        top: 44px;
         right: -17px;
         background-color: #0057ff;
       }
@@ -55,7 +55,7 @@
         position: absolute;
         text-align: start;
         background-color: white;
-        top: 60px;
+        top: 57px;
         right: -42px;
         width: 111px;
         height: 175px;
@@ -69,7 +69,7 @@
           opacity: 1;
         }
 
-        a {
+        p {
           position: relative;
           text-align: start;
           font-size: 16px;
@@ -77,12 +77,14 @@
           font-style: normal;
           font-weight: 400;
           color: black;
-          padding: 6px 25px;
+          padding: 7px 20px;
           text-decoration: none;
           display: block;
-          top: 10px;
+          top: 6px;
+          cursor: pointer;
           &:hover {
             color: #0057ff;
+            cursor: pointer;
           }
         }
       }
@@ -96,6 +98,7 @@
       font-style: normal;
       font-weight: 400;
       margin-left: 40px;
+      cursor: pointer;
     }
 
     .blackText {
@@ -153,24 +156,26 @@
           border-bottom-right-radius: 5px;
           border: 0.3px solid rgba(0, 0, 0, 0.7);
           border-top: none;
-          .dropdownOptionsA {
-            a {
+          .dropdownOptionsP {
+            p {
               position: relative;
-              top: 15px;
+              top: 10px;
+              left: 10px;
             }
           }
-          .dropdownOptions_a {
-            padding-top: 10px;
+          .dropdownOptions_p {
+             
             text-align: start;
-            a {
+            p {
               position: relative;
-              top: 5px;
+              top: 10px;
+              left: 10px;
             }
           }
-          a {
+          p {
             position: relative;
             text-align: start;
-            padding: 17px 17px;
+            padding: 5px 5px;
             color: rgba(0, 0, 0, 0.8);
             font-size: 14px;
             font-family: Arial;
@@ -179,8 +184,7 @@
             line-height: normal;
             &:hover {
               color: #0057ff;
-              cursor: pointer;
-            }
+             }
           }
         }
         .selectedOption {
@@ -250,7 +254,7 @@
       gap: 25px;
       .hr1 {
         position: relative;
-        top: 27px;
+        top: 21px;
         width: 43.046px;
         height: 3px;
         border-radius: 20px;
@@ -260,7 +264,7 @@
         position: absolute;
         background-color: white;
         right: 10px;
-        top: 80px;
+        top: 75px;
         border-radius: 5px;
         width: 390px;
         height: 385px;
@@ -275,13 +279,21 @@
             border-radius: 5px;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
             background-color: white;
-            padding: 15px 13px;
 
+            p {
+              padding: 15px 15px 15px 20px;
+              color: #333;
+              font-family: Arial;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px;
+            }
             img {
               align-items: center;
               height: 40px;
               width: 40px;
-              margin: 10px 25px;
+              margin: 19px 20px 18.7px 15px;
             }
           }
         }
@@ -296,7 +308,7 @@
           left: 250px;
           z-index: 10;
           cursor: pointer;
-          a {
+          p {
             position: relative;
             color: #fff;
             text-align: center;
@@ -332,9 +344,9 @@
         height: 27px;
         border-radius: 5px;
         background: #0057ff;
-        margin: 70px 95px;
+        margin: 10px 95px;
         cursor: pointer;
-        a {
+        p {
           position: relative;
           color: #fff;
           font-size: 14px;
@@ -346,30 +358,14 @@
         }
       }
       .dropdownUser_header {
-        width: 281px;
+        width: 280px;
         height: 33px;
         flex-shrink: 0;
         display: flex;
         border-radius: 5px 5px 0px 0px;
         background: #0057ff;
         display: inline-block;
-        .verticalLine {
-          position: relative;
-          display: inline-block;
-          border-left: 1px solid black;
-          height: 25px;
-          margin: 0px 20px;
-          top: 20px;
-        }
-
-        .seekerActive {
-          color: blue;
-        }
-        .employerActive {
-          color: blue;
-        }
-
-        p {
+        h5 {
           margin-top: 10px;
           margin-right: -17px;
           color: #fff;
@@ -379,35 +375,58 @@
           font-weight: 400;
           line-height: normal;
         }
-        a {
-          color: #333;
-          font-size: 14px;
-          font-family: Arial;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          position: relative;
-          top: 10px;
-          cursor: pointer;
+        .dropdownUser_h6 {
+          display: flex;
+
+          .verticalLine {
+            position: relative;
+            display: inline-block;
+            border-left: 1px solid black;
+            height: 25px;
+            margin: 0px 15px;
+            top: 20px;
+          }
+
+          .seekerLabel{
+           padding-left:10px;
+          }
+          .employerActive {
+            color: blue;
+            cursor: pointer;
+          }
+          .seekerActive{
+            margin-left: 0px;
+            color: blue;
+          }
+          
+          h6 {
+            color: #333;
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            padding: 20px 10px 15px 32px; 
+            cursor: pointer;
+          }
         }
-        hr {
-          margin-top: 25px;
-        }
+      
       }
       .dropdown_add {
         position: relative;
         text-align: start;
-        margin: -25px 25px;
+        bottom: 40px;
         p {
           position: relative;
+          display: flex;
+
           color: #333;
           font-size: 14px;
           font-family: Arial;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
           cursor: pointer;
           top: 40px;
+          left: 28px;
           padding: 5px 5px;
           &:hover {
             color: blue;
