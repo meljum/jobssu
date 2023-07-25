@@ -1,19 +1,5 @@
-<svg width="86" height="79" viewBox="0 0 86 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_320_941)">
-<path d="M65.9958 32.5C65.9958 44.9264 55.9223 55 43.4958 55C31.0694 55 20.9958 44.9264 20.9958 32.5C20.9958 20.0736 31.0694 10 43.4958 10C55.9223 10 65.9958 20.0736 65.9958 32.5Z" fill="white"/>
-</g>
-<path d="M43.9958 32.0884C46.7573 32.0884 48.9958 29.6468 48.9958 26.6349C48.9958 23.623 46.7573 21.1814 43.9958 21.1814C41.2344 21.1814 38.9958 23.623 38.9958 26.6349C38.9958 29.6468 41.2344 32.0884 43.9958 32.0884Z" stroke="#0057FF" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M52.586 42.9954C52.586 38.7744 48.736 35.3605 43.996 35.3605C39.256 35.3605 35.406 38.7744 35.406 42.9954" stroke="#0057FF" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<filter id="filter0_d_320_941" x="0.99585" y="-6" width="85" height="85" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="10"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_320_941"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_320_941" result="shape"/>
-</filter>
-</defs>
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45 22.5C45 34.9264 34.9264 45 22.5 45C10.0736 45 0 34.9264 0 22.5C0 10.0736 10.0736 0 22.5 0C34.9264 0 45 10.0736 45 22.5Z" fill="white"/>
+<path d="M22.961 21.2119C25.93 21.2119 28.337 18.9259 28.337 16.106C28.337 13.286 25.93 11 22.961 11C19.9919 11 17.585 13.286 17.585 16.106C17.585 18.9259 19.9919 21.2119 22.961 21.2119Z" stroke="#0057FF" stroke-opacity="0.8" stroke-width="1.28" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.92 34.8279C31.92 30.1232 27.9042 26.318 22.96 26.318C18.0158 26.318 14 30.1232 14 34.8279" stroke="#0057FF" stroke-opacity="0.8" stroke-width="1.28" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
