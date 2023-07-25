@@ -117,7 +117,7 @@ a {
 
 @media (max-width: 620px) {
   .container {
-    padding: 30px 25px;
+    padding: 30px 25px
   }
 }
 #lock-menu ul{

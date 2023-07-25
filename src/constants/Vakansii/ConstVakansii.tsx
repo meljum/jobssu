@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image'
 import Link from 'next/link';
 
-interface VakansiiItem {
+interface VakansiiItems {
   title: string;
   online: string;
   name: string;
@@ -19,7 +19,7 @@ interface VakansiiItem {
 
 const Vakansii: React.FC = () => {
   const { t } = useTranslation();
-  const [arrVakansii, setArrVakansii] = useState<VakansiiItem[]>([
+  const [arrVakansii, setArrVakansii] = useState<VakansiiItems[]>([
     {
       id: 1,
       title: 'Solid Academy',
@@ -161,7 +161,6 @@ const Vakansii: React.FC = () => {
         <div className={scss.wrapper__bottom}>
           <span>{e.date}</span>
           <Link href='/VakansiesMore' legacyBehavior>
-
             <button className={scss.button}>{t("vakansii.podrobnee")}</button>
           </Link>
         </div>
@@ -171,5 +170,6 @@ const Vakansii: React.FC = () => {
 
   return <>{renderVakansii}</>;
 };
+
 
 export default Vakansii;
