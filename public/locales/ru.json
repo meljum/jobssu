@@ -1,19 +1,20 @@
 {
-"vakansii": {
-      "podrobnee": "Подробнее",
-      "title": "Требуется уборщики в компанию",
-      "time": "за час",
-      "vakansii": "Все ваканции",
-      "rabota": "Работа и вакансии в Бишкеке"
-},
-"header": {
-      "heder_aboutUs": "О нас",
-      "heder_reviews": "Отзывы",
-      "heder_news": "Новости",
-      "heder_jobs": "Вакансии",
-      "heder_help": "Помощь",
-      "heder_contests": "Конкурсы",
-      "header_plaseholder": "Поиск компании, должности или услуг",
-      "header_search": "Поиск"
-}
+  "header": {
+    "heder_aboutUs": "О нас",
+    "heder_reviews": "Отзывы",
+    "heder_news": "Новости",
+    "heder_jobs": "Вакансии",
+    "heder_help": "Помощь",
+    "heder_contests": "Конкурсы",
+    "header_placeholder": "Поиск компании, должности или услуг",
+    "header_search": "Поиск"
+  },
+
+  "vakansii": {
+    "podrobnee": "Подробнее",
+    "title": "Требуется уборщики в компанию",
+    "time": "за час",
+    "vakansii": "Все ваканции",
+    "rabota": "Работа и вакансии в Бишкеке"
+  }
 }
