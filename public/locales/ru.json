@@ -9,6 +9,13 @@
     "header_plaseholder": "Поиск компании, должности или услуг",
     "header_search": "Поиск"
   },
+  "vakansii": {
+    "podrobnee": "Подробнее",
+    "title": "Требуется уборщики в компанию",
+    "time": "за час",
+    "vakansii": "Все ваканции",
+    "rabota": "Работа и вакансии в Бишкеке"
+  },
   "footer": {
     "aboutUs_title": "О нас",
     "news_services_title": "Новости на сервисе",
@@ -20,12 +27,5 @@
     "addResume_title": "Добавить резюме",
     "section_of_vacancies_title": "Раздел вакансий ",
     "companies_title": "Компании"
-  },
-  "vakansii": {
-    "podrobnee": "Подробнее",
-    "title": "Требуется уборщики в компанию",
-    "time": "за час",
-    "vakansii": "Все ваканции",
-    "rabota": "Работа и вакансии в Бишкеке"
   }
 }
