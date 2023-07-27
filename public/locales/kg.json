@@ -21,5 +21,17 @@
     "time": "бир саатта",
     "vakansii": "Бардык бош орундар",
     "rabota": "Бишкек шаарындагы жумуш жана бош орундар"
+  },
+  "footer": {
+    "aboutUs_title": "Биз жөнүндө",
+    "news_services_title": "Кызмат боюнча жаңылыктар",
+    "help_title": "Жардам",
+    "employers_title": "Иш берүүчүлөр",
+    "post_a_job_title": "Жумуш жарыялоо",
+    "resumeSection_title": "Резюме бөлүмү",
+    "applicants_title": "Талапкерлерге",
+    "addResume_title": "Резюме кошуу",
+    "section_of_vacancies_title": "Вакансиялар бөлүмү",
+    "companies_title": "Компаниялар"
   }
 }
