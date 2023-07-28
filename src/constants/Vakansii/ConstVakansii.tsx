@@ -116,7 +116,6 @@ const Vakansii: React.FC = () => {
       )
     );
   };
-
   const renderVakansii = useMemo(() => (
     arrVakansii.map((e) => (
       <div className={scss.wrapper} key={e.id}>
