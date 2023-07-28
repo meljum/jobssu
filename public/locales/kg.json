@@ -9,12 +9,18 @@
     "header_placeholder": "Компанияны, кызматты же кызматты издеңиз",
     "header_search": "Издөө"
   },
+  "main": {
+    "main__jobs_title": "Жумуштар",
+    "main__summary_title": "Жыйынтык",
+    "main__companies_title": "Компаниялар",
+    "main__title": "Ишкерлер үчүн онлайн \nкызматы"
+  },
   "vakansii": {
     "podrobnee": "Дагы",
     "title": "Компанияга тазалагычтар керек",
     "time": "бир саатта",
     "vakansii": "Бардык бош орундар",
-    "rabota": "Жумаш жана бош орундар"
+    "rabota": "Бишкек шаарындагы жумуш жана бош орундар"
   },
   "footer": {
     "aboutUs_title": "Биз жөнүндө",

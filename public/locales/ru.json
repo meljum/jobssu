@@ -1,31 +1,37 @@
 {
-"header": {
-      "heder_aboutUs": "О нас",
-      "heder_reviews": "Отзывы",
-      "heder_news": "Новости",
-      "heder_jobs": "Вакансии",
-      "heder_help": "Помощь",
-      "heder_contests": "Конкурсы",
-      "header_plaseholder": "Поиск компании, должности или услуг",
-      "header_search": "Поиск"
-},
-"vakansii": {
-      "podrobnee": "Подробнее",
-      "title": "Требуется уборщики в компанию",
-      "time": "за час",
-      "vakansii": "Все ваканции",
-      "rabota": "Работа и вакансии в Бишкеке"
-},
-"footer": {
-      "aboutUs_title": "О нас",
-      "news_services_title": "Новости на сервисе",
-      "help_title": "Помощь",
-      "employers_title": "Работадателям",
-      "post_a_job_title": "Разместить вакансию",
-      "resumeSection_title": "Раздел резюме",
-      "applicants_title": "Соискателям",
-      "addResume_title": "Добавить резюме",
-      "section_of_vacancies_title": "Раздел вакансий ",
-      "companies_title": "Компании"
-}
+  "header": {
+    "heder_aboutUs": "О нас",
+    "heder_reviews": "Отзывы",
+    "heder_news": "Новости",
+    "heder_jobs": "Вакансии",
+    "heder_help": "Помощь",
+    "heder_contests": "Конкурсы",
+    "header_plaseholder": "Поиск компании, должности или услуг",
+    "header_search": "Поиск"
+  },
+  "main": {
+    "main__jobs_title": "Вакансии",
+    "main__summary_title": "Резюме",
+    "main__companies_title": "Компаний",
+    "main__title": "Нанимайте онлайн для \nлюбой работы"
+  },
+  "vakansii": {
+    "podrobnee": "Подробнее",
+    "title": "Требуется уборщики в компанию",
+    "time": "за час",
+    "vakansii": "Все ваканции",
+    "rabota": "Работа и вакансии в Бишкеке"
+  },
+  "footer": {
+    "aboutUs_title": "О нас",
+    "news_services_title": "Новости на сервисе",
+    "help_title": "Помощь",
+    "employers_title": "Работадателям",
+    "post_a_job_title": "Разместить вакансию",
+    "resumeSection_title": "Раздел резюме",
+    "applicants_title": "Соискателям",
+    "addResume_title": "Добавить резюме",
+    "section_of_vacancies_title": "Раздел вакансий ",
+    "companies_title": "Компании"
+  }
 }
