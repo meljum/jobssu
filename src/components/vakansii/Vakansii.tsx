@@ -49,6 +49,7 @@ function Vakansii() {
     setSelectedIndex(index);
     setSelectedOption(selectedOptionWithoutSoftSign);
 
+    
     handleClose();
   };
 
