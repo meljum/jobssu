@@ -9,6 +9,12 @@
     "header_plaseholder": "Поиск компании, должности или услуг",
     "header_search": "Поиск"
   },
+  "main": {
+    "main__jobs_title": "Вакансии",
+    "main__summary_title": "Резюме",
+    "main__companies_title": "Компаний",
+    "main__title": "Нанимайте онлайн для \nлюбой работы"
+  },
   "vakansii": {
     "podrobnee": "Подробнее",
     "title": "Требуется уборщики в компанию",
