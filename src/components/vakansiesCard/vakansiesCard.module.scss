@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  .wrapper__foto {
+    width: 271.986px;
+    height: 240px;
+  }
+  .wrapper__title {
+   .title {
+    width: 50%;
+      color: #333;
+      font-family: Arial;
+      font-size: 21.601px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .salary{
+      padding-top: 120px;
+      color: #0057ff;
+      font-family: Arial;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
