@@ -16,8 +16,6 @@ export default function Home() {
       <Section/>
       <Vakansii/>
       <Main array={MainTitle} />
-      <Section />
-      <Vakansii />
       <Footer />
     </>
   );
