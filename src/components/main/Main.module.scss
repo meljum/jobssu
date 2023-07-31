@@ -1,208 +1,180 @@
 @font-face {
-    font-family: "Arial";
-    src: url("/fonts/Arialm.ttf") format("truetype");
+  font-family: "Arial";
+  src: url("/fonts/Arialm.ttf") format("truetype");
 }
 
 .wrapper {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 23, 67, 0.8)), url(../../../public/images/main/back.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 629px;
-    width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 23, 67, 0.8)),
+    url(../../../public/images/main/back.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 629px;
+  width: 100%;
 
-    .text {
-        position: absolute;
-        left: 50.5%;
-        transform: translate(-50%, 250%);
-        display: flex;
-        flex-direction: row;
-        gap: 166px;
-        text-align: center;
+  .wrapper__text {
+    position: absolute;
+    left: 50.1%;
+    transform: translate(-50%, 250%);
+    display: flex;
+    flex-direction: row;
+    gap: 166px;
+    text-align: center;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+    .cercle {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
 
-            p {
-                font-family: Arial;
-                font-size: 19px;
-                font-weight: 400;
-                line-height: 22px;
-                letter-spacing: 0em;
-                text-align: center;
-                color: #ffffff;
-
-
-            }
-
-            h2 {
-                font-family: Arial;
-                font-size: 28px;
-                font-weight: 700;
-                line-height: 32px;
-                letter-spacing: 0em;
-                text-align: center;
-                color: #ffffff;
-            }
-        }
-    }
-
-    .cercles {
-        position: absolute;
-        top: 463px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 90px;
-        z-index: 2;
-
-    }
-
-    h1 {
+      p {
         font-family: Arial;
-        font-weight: 700;
-        font-size: 58px;
-        line-height: 66.69px;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
         text-align: center;
         color: #ffffff;
-        padding-top: 181px;
-        padding-top: 160px;
+      }
+
+      h2 {
+        font-family: Arial;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #ffffff;
+      }
     }
+  }
+
+  .wrapper__cercles {
+    position: absolute;
+    top: 463px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+    z-index: 2;
+  }
+
+  h1 {
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 66.69px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 181px;
+    padding-top: 160px;
+    white-space: pre-line;
+  }
 }
 
-.wave {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    top: 230px;
+.wrapper__wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  top: 230px;
 
+  &_one {
+    position: absolute;
+    background: url(../../../public/images/main/wave.svg) repeat-x;
+    width: 10000px;
+    height: 106px;
+    animation: waves 12s infinite linear;
+  }
 
-    &__one {
-        position: absolute;
-        background: url(../../../public/images/main/wave.svg) repeat-x;
-        width: 7000px;
-        height: 106px;
-        animation: waves 20s infinite linear;
-    }
+  &_two {
+    background: url(../../../public/images/main/wave33.svg) repeat-x;
+    width: 10000px;
+    height: 106px;
+    animation: waves2 10s infinite linear;
+  }
 
-    &__two {
-        background: url(../../../public/images/main/wave33.svg) repeat-x;
-        width: 7000px;
-        height: 106px;
-        animation: waves2 15s infinite linear;
-
-    }
-
-    &__three {
-        position: absolute;
-        top: 0;
-        background: url(../../../public/images/main/wave22.svg) repeat-x;
-        width: 7000px;
-        height: 106px;
-        animation: waves2 10s infinite linear;
-
-
-    }
-
-
+  &_three {
+    position: absolute;
+    top: 0;
+    background: url(../../../public/images/main/wave22.svg) repeat-x;
+    width: 10000px;
+    height: 106px;
+    animation: waves2 8s infinite linear;
+  }
 }
-
 
 @keyframes waves {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    50% {
-        transform: translateX(-969px);
-    }
+  50% {
+    transform: translateX(-969px);
+  }
 
-    100% {
-        transform: translateX(-1938px);
-    }
+  100% {
+    transform: translateX(-1938px);
+  }
 }
 
 @keyframes waves2 {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    50% {
-        transform: translateX(-940px);
-    }
+  50% {
+    transform: translateX(-940px);
+  }
 
-    100% {
-        transform: translateX(-1880px);
-    }
+  100% {
+    transform: translateX(-1880px);
+  }
 }
 
 @media (max-width: 1248px) {
-    .wrapper {
-
-
-        // h1 {
-        //     font-size: 58px;
-        // }
-
-
-        .cercles {
-            width: 365px;
-            height: 173px;
-        }
-
-        .text {
-            transform: translate(-50%, 245%);
-            gap: 150px;
-
-            div {
-                width: 110px;
-            }
-
-        }
-
-
-
+  .wrapper {
+    .wrapper__cercles {
+      width: 365px;
+      height: 173px;
     }
+
+    .wrapper__text {
+      transform: translate(-50%, 245%);
+      gap: 150px;
+
+      .cercle {
+        width: 110px;
+      }
+    }
+  }
 }
 
-
 @media (max-width: 768px) {
-    .wrapper {
-
-
-        .cercles {
-            height: 150px;
-            width: 150px;
-            left: 30%;
-            transform: translate(50%, -50%);
-
-        }
-
-        h1{
-            font-size: 48px;
-        }
-
-        .text {
-            left: 50%;
-            transform: translate(-51%, 245%);
-            gap: 130px;
-
-            div {
-                h2 {
-                    font-size: 22px;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
-
-        }
-
-
+  .wrapper {
+    .wrapper__cercles {
+      height: 150px;
+      width: 150px;
+      left: 30%;
+      transform: translate(50%, -50%);
     }
+    h1 {
+      font-size: 48px;
+    }
+    .wrapper__text {
+      left: 50%;
+      transform: translate(-51%, 245%);
+      gap: 130px;
+
+      .cercle {
+        h2 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
