@@ -12,10 +12,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Review />
+      
       <Section/>
       <Vakansii/>
       <Main array={MainTitle} />
+      <Review />
       <Footer />
     </>
   );
