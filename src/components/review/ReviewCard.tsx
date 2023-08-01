@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import css from './ReviewCard.module.scss'
 import { useTranslation } from 'react-i18next';
 import { useMemo } from "react"
-import profilePic from '../../public/images/profilePic.svg'
+import profilePic from '../../../public/images/profilePic.svg'
 import Image from "next/image";
+import Link from 'next/link'
 
 interface reviewCardItem {
     text: string,
@@ -20,7 +21,7 @@ const ReviewCard: React.FC = () => {
             text: t("review.text"),
             btn: t("review.btn"),
             name: t("review.name"),
-            info: t("review.info")
+            info: t("review.info"),
         },
         {
             id: 2,
@@ -52,7 +53,7 @@ const ReviewCard: React.FC = () => {
             <div className={css.card} key={e.id} >
                 <h1 className={css.text}>{e.text}</h1>
                 <div className={css.btn}>
-                    <button>{e.btn}</button>
+                    <Link href='/NewsPage'><button>{e.btn}</button></Link>
                 </div>
                 <div className={css.profile}>
                     <Image src={profilePic} width={48} height={48} alt='profile' />

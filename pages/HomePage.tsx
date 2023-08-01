@@ -1,5 +1,5 @@
 import React from 'react'
-import Review from './review/Review'
+import Review from '../src/components/review/Review'
 
 export default function HomePage() {
   return (

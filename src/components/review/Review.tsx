@@ -1,10 +1,10 @@
 import React from 'react'
 import css from './Review.module.scss'
-import useReviewCard from '../review/ReviewCard'
+import useReviewCard from './ReviewCard'
 import { useTranslation } from 'react-i18next';
 
-function Review() {
-  const renderReviewCard = useReviewCard(arguments)
+const Review:React.FC = () => {
+  const renderReviewCard = useReviewCard("")
   const { t } = useTranslation();
 
   return (
@@ -16,7 +16,6 @@ function Review() {
           {renderReviewCard}
         </div>
       </div>
-
     </div>
   )
 }
