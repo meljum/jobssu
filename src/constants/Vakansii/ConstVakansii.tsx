@@ -1,4 +1,4 @@
-import scss from './ConstVakansii.module.scss'
+import scss from '../../components/vakansii/ConstVakansii.module.scss'
 import { useMemo, useState, useTransition } from 'react'
 import { IconButton, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -116,7 +116,6 @@ const Vakansii: React.FC = () => {
       )
     );
   };
-
   const renderVakansii = useMemo(() => (
     arrVakansii.map((e) => (
       <div className={scss.wrapper} key={e.id}>
@@ -160,7 +159,7 @@ const Vakansii: React.FC = () => {
         </div>
         <div className={scss.wrapper__bottom}>
           <span>{e.date}</span>
-          <Link href='/AllVakansies' legacyBehavior>
+          <Link href='/VakansiesMore' legacyBehavior>
 
             <button className={scss.button}>{t("vakansii.podrobnee")}</button>
           </Link>
