@@ -1,7 +1,9 @@
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 20.75px;
+    // gap: 20.75px;
+    margin-top:20.75px;
+    
 }
 
 .wrapper {
@@ -20,7 +22,7 @@
     gap: 32px;
 
     .logo {
-        width: 271px;
+     padding:32px;
     }
 
     .text {
@@ -45,7 +47,11 @@
     gap: 33px;
     .top__h5{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
+        width: 371px;
+        .vector{
+         right: px;
+        }
     h5 {
         color: #333;
         font-family: Arial;
@@ -54,7 +60,7 @@
         font-weight: 400;
         line-height: normal;
         margin: 0;
-        width: 371px;
+     
     }
 }
 
@@ -218,7 +224,8 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin-left: 65px;
+        margin-left: 32.25px;
+        margin-top: -132.91px;
     }
 
     .button_text {
