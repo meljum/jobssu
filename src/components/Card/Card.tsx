@@ -48,19 +48,19 @@ const Card: React.FC<CardItem> = (props) => {
             <div className={scss.text_top}>
               <div className={scss.top__h5}>
                 <h5>{zagalovok}</h5>
-                <Image src={vector} alt="vector" width={20} height={20} />
+                <Image className={scss.vector} src={vector} alt="vector" width={15.5} height={20} />
               </div>
               <div className={scss.description}>
                 <div className={scss.description_left}>
                   <div className={scss.left_top}>
-                    <Image src={icon1} alt="icon" width={20} height={20} />
+                    <Image src={icon1} alt="icon" width={13} height={13.33} />
                     <div className={scss.left_text}>
                       <p>Стаж работы</p>
                       <span>{staj_raboty}</span>
                     </div>
                   </div>
                   <div className={scss.left_bottom}>
-                    <Image src={icon2} alt="Icon" width={20} height={20} />
+                    <Image src={icon2} alt="Icon" width={14.7} height={13.3} />
                     <div className={scss.bottom_text}>
                       <p>График работы</p>
                       <span>{grafik_raboty}</span>
@@ -69,15 +69,15 @@ const Card: React.FC<CardItem> = (props) => {
                 </div>
                 <div className={scss.description_right}>
                   <div className={scss.right_top}>
-                    <Image src={icon3} alt="Icon" width={20} height={20} />
+                    <Image src={icon3} alt="Icon" width={16} height={16} />
                     <p>Evyap group</p>
                   </div>
                   <div className={scss.right_middle}>
-                    <Image src={icon4} alt="Icon" width={20} height={20} />
+                    <Image src={icon4} alt="Icon" width={11.5} height={13.35} />
                     <p>{location}</p>
                   </div>
                   <div className={scss.right_bottom}>
-                    <Image src={icon5} alt="Icon" width={20} height={20} />
+                    <Image src={icon5} alt="Icon" width={14} height={14} />
                     <p>{time}</p>
                   </div>
                 </div>

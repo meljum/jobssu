@@ -2,7 +2,7 @@ import React from 'react'
 
 function VakansiesMore() {
   return (
-    <div>VakansiesMore</div>
+    <div>Podrobnee</div>
   )
 }
 
