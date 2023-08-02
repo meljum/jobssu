@@ -58,6 +58,7 @@ function NewVakansies() {
   );
 
   return (
+    <div className="container">
     <div className={scss.vak}>
       <div className={scss.vak_cont}>
         <h1 className={scss.vak__h1}> Новые вакансии </h1>
@@ -87,6 +88,7 @@ function NewVakansies() {
         </div>
       </div>
       <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
+    </div>
     </div>
   );
 }
