@@ -26,7 +26,6 @@ function Filtration() {
                 <FilterExpansds/>
             </div>
             <div className={scss.wrapper_right}>
-                <Card/>
             </div>
         </div>
     )

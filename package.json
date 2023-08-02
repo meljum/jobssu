@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@types/i18next": "^13.0.0",
-    "@types/scheduler": "^0.16.3"
+    "@types/scheduler": "^0.16.3",
+    "encoding": "^0.1.13"
   }
 }
