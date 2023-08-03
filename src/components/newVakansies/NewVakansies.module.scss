@@ -1,0 +1,166 @@
+.vak {
+  width: 100%;
+
+  .cont__coursesCard {
+    margin-left: 345px;
+    margin-top: 45px;
+    flex-shrink: 0;
+    border-radius: 4.992px;
+    background: #fff;
+    box-shadow: 0px 3.9934492111206055px 29.9;
+  }
+
+  .vak__h1 {
+    color: #252525;
+    text-align: center;
+    font-family: Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 80px;
+  }
+  .vak_wrap {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    .vak_inp {
+      width: 139px;
+      height: 31px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      background: #0057ff;
+      margin-left: 344px;
+      margin-top: 102.59px;
+      p {
+        color: #fff;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 6px;
+      }
+    }
+    .vak_title {
+      color: #252525;
+      text-align: center;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 113.59px;
+      margin-left: 90px;
+    }
+    .vak_inp1 {
+      margin-top: 102.59px;
+      margin-left: 32px;
+      cursor: pointer;
+      p {
+        padding-top: 7px;
+        color: #252525;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .vak_inp2 {
+      margin-top: 102.59px;
+      margin-left: 32px;
+      cursor: pointer;
+      p {
+        padding-top: 7px;
+        color: #252525;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .vak_inp3 {
+      margin-top: 102.59px;
+      margin-left: 32px;
+      cursor: pointer;
+      p {
+        padding-top: 7px;
+        color: #252525;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .active {
+      text-align: center;
+      align-items: center;
+      width: 139px;
+      height: 31px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      background: #0057ff;
+      margin-top: 102.59px;
+      margin-left: 32px;
+      cursor: pointer;
+      p {
+        padding-top: 7px;
+        color: #fff;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .active {
+      margin-left: 37px;
+      border-radius: 3px;
+      background: #0057ff;
+      margin-top: 102.59px;
+      margin-left: 32px;
+      height: 31px;
+      width: 170px;
+      cursor: pointer;
+      p {
+        padding-top: 7px;
+        color: #fff;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .active {
+      margin-left: 62px;
+      margin-top: 102.59px;
+      border-radius: 3px;
+      background: #0057ff;
+      margin-top: 102.59px;
+      margin-left: 32px;
+      height: 31px;
+      width: 170px;
+      cursor: pointer;
+      P {
+        padding-top: 7px;
+        color: #fff;
+        text-align: center;
+        font-family: Arial;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
