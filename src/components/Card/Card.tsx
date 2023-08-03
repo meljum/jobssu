@@ -7,6 +7,7 @@ import icon4 from "../../../public/images/CardIcon/location.svg";
 import icon5 from "../../../public/images/CardIcon/time.svg";
 import vector from "../../../public/images/CardIcon/Vector.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardItem {
   id: number;
@@ -48,7 +49,13 @@ const Card: React.FC<CardItem> = (props) => {
             <div className={scss.text_top}>
               <div className={scss.top__h5}>
                 <h5>{zagalovok}</h5>
-                <Image className={scss.vector} src={vector} alt="vector" width={15.5} height={20} />
+                <Image
+                  className={scss.vector}
+                  src={vector}
+                  alt="vector"
+                  width={15.5}
+                  height={20}
+                />
               </div>
               <div className={scss.description}>
                 <div className={scss.description_left}>
@@ -95,7 +102,9 @@ const Card: React.FC<CardItem> = (props) => {
                   <span className={scss.som}>сом</span>
                 </div>
               </div>
-              <button>Отправить резюме</button>
+              <Link href="/YourResume" legacyBehavior>
+                <button>Отправить резюме</button>
+              </Link>
             </div>
           </div>
         </div>
