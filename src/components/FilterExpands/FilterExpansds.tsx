@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 function FilterExpands() {
-    const {t} = useTranslation()
-    
+    const { t } = useTranslation()
+
     const [buttonDropdown, setButtonDropdown] = useState([false, false, false, false, false, false]);
 
     const handlePodropbostiButtonClick = (index: number) => {
@@ -143,8 +143,8 @@ function FilterExpands() {
                         )}
                     </div>
                     <div className={scss.podrobnosti_title}>
-                        <label className={scss.title_label} 
-                        onClick={() => handlePodropbostiButtonClick(2)}>
+                        <label className={scss.title_label}
+                            onClick={() => handlePodropbostiButtonClick(2)}>
                             <Button text='График работы' />
                             <Image
                                 style={{

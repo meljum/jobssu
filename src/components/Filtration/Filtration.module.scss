@@ -43,7 +43,15 @@
         }
 
         .left__filters {
-            button{
+            :active {
+                border: 1px solid #0057FF;
+                color: #0057FF !important;
+                background: #FFF;
+            }
+
+            button {
+                border: 1px solid #0057FF;
+
                 padding: 12px 63px;
                 border-radius: 3px;
                 background: #0057FF;

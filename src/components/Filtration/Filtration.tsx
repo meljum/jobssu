@@ -5,7 +5,7 @@ import FilterExpansds from '../FilterExpands/FilterExpansds'
 function Filtration() {
     const { t } = useTranslation();
     return (
-        <div className={scss.wrapper + ' container'}>
+        <div className={scss.wrapper}>
             <div className={scss.wrapper__left}>
                 <div className={scss.left__add}>
                     <Button text={t("filtation.soiscatel")}></Button>
