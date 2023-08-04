@@ -59,6 +59,7 @@ function NewVakansies() {
   );
 
   return (
+    <div className="container">
     <div className={scss.vak}>
       <div className={scss.vak_left}>
         <Filtration/>
@@ -93,6 +94,7 @@ function NewVakansies() {
       </div>
       <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
       </div>
+    </div>
     </div>
   );
 }
