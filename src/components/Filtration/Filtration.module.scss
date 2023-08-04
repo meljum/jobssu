@@ -4,11 +4,12 @@
 }
 
 .wrapper {
+    padding-right: 0px !important;
+    display: flex;
     font-family: Arial, sans-serif;
 
     .wrapper__left {
         text-align: start;
-        width: 16%;
 
         button {
             color: #252525;

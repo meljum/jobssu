@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import scss from "./NewVakansies.module.scss";
 import { VakansiesCardArr, VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 import Card from "../../components/Card/Card";
+import Filtration from "../Filtration/Filtration";
 
 function NewVakansies() {
   const [searchText, setSearchText] = useState<string>("");
@@ -59,6 +60,10 @@ function NewVakansies() {
 
   return (
     <div className={scss.vak}>
+      <div className={scss.vak_left}>
+        <Filtration/>
+      </div>
+      <div className={scss.vak_container}>
       <div className={scss.vak_cont}>
         <h1 className={scss.vak__h1}> Новые вакансии </h1>
         <div className={scss.vak_wrap}>
@@ -87,6 +92,7 @@ function NewVakansies() {
         </div>
       </div>
       <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
+      </div>
     </div>
   );
 }

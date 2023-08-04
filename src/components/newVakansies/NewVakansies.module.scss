@@ -1,8 +1,15 @@
 .vak {
-  width: 100%;
+  display: flex;
+  gap: 71px;
+  .vak_left{
+    width: 20%;
 
+  }
+.vak_container{
+  display: flex;
+  flex-direction: column;
+}
   .cont__coursesCard {
-    margin-left: 345px;
     margin-top: 45px;
     flex-shrink: 0;
     border-radius: 4.992px;
@@ -30,7 +37,7 @@
       flex-shrink: 0;
       border-radius: 3px;
       background: #0057ff;
-      margin-left: 344px;
+      // margin-left: 344px;
       margin-top: 102.59px;
       p {
         color: #fff;
