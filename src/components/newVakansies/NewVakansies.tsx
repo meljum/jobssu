@@ -60,41 +60,41 @@ function NewVakansies() {
 
   return (
     <div className="container">
-    <div className={scss.vak}>
-      <div className={scss.vak_left}>
-        <Filtration/>
-      </div>
-      <div className={scss.vak_container}>
-      <div className={scss.vak_cont}>
-        <h1 className={scss.vak__h1}> Новые вакансии </h1>
-        <div className={scss.vak_wrap}>
-          <div className={scss.vak_inp}>
-            <p> Найдено:{numberOfVakansies}</p>
+      <div className={scss.vak}>
+        <div className={scss.vak_left}>
+          <Filtration />
+        </div>
+        <div className={scss.vak_container}>
+          <div className={scss.vak_cont}>
+            <h1 className={scss.vak__h1}> Новые вакансии </h1>
+            <div className={scss.vak_wrap}>
+              <div className={scss.vak_inp}>
+                <p> Найдено:{numberOfVakansies}</p>
+              </div>
+              <p className={scss.vak_title}>Сортировать:</p>
+              <div
+                className={`${scss.vak_inp1} ${sortOrder === "default" ? scss.active : ""}`}
+                onClick={handleSortByDefault}
+              >
+                <p> По умолчанию</p>
+              </div>
+              <div
+                className={`${scss.vak_inp2} ${sortOrder === "salaryAsc" ? scss.active : ""}`}
+                onClick={handleSortBySalaryAsc}
+              >
+                <p>По возрастанию зарплат</p>
+              </div>
+              <div
+                className={`${scss.vak_inp3} ${sortOrder === "salaryDesc" ? scss.active : ""}`}
+                onClick={handleSortBySalaryDesc}
+              >
+                <p>По убыванию зарплат</p>
+              </div>
+            </div>
           </div>
-          <p className={scss.vak_title}>Сортировать:</p>
-          <div
-            className={`${scss.vak_inp1} ${sortOrder === "default" ? scss.active : ""}`}
-            onClick={handleSortByDefault}
-          >
-            <p> По умолчанию</p>
-          </div>
-          <div
-            className={`${scss.vak_inp2} ${sortOrder === "salaryAsc" ? scss.active : ""}`}
-            onClick={handleSortBySalaryAsc}
-          >
-            <p>По возрастанию зарплат</p>
-          </div>
-          <div
-            className={`${scss.vak_inp3} ${sortOrder === "salaryDesc" ? scss.active : ""}`}
-            onClick={handleSortBySalaryDesc}
-          >
-            <p>По убыванию зарплат</p>
-          </div>
+          <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
         </div>
       </div>
-      <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
-      </div>
-    </div>
     </div>
   );
 }

@@ -54,10 +54,12 @@
                     }
 
                     label {
+                        cursor: pointer;
                         display: flex;
                         align-items: center;
 
                         input {
+                            cursor: pointer;
                             position: absolute;
                             width: 20px;
                             height: 20px;
