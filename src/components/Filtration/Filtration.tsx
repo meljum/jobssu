@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import scss from './Filtration.module.scss'
 import Button from '../button/Button'
-import FilterExpansds from '../FilterExpands/FilterExpansds'
+import FilterExpandsds from '../FilterExpands/FilterExpansds'
+import { CardData } from '../../constants/CardData';
 function Filtration() {
     const { t } = useTranslation();
     return (
@@ -21,7 +22,7 @@ function Filtration() {
                 <div className={scss.left__filters}>
                     <button>{t("filtation.button")}</button>
                 </div>
-                <FilterExpansds />
+                <FilterExpandsds cardData={CardData} />
             </div>
             <div className={scss.wrapper_right}>
             </div>

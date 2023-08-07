@@ -4,17 +4,39 @@ import Button from '../button/Button';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-function FilterExpands() {
-    const { t } = useTranslation()
-
+interface CardItem {
+    id: number;
+    img: string;
+    zagalovok: string;
+    staj_raboty: string;
+    grafik_raboty: string;
+    location: string;
+    time: string;
+    price_from: string;
+    price_before: string;
+  }
+  
+  interface FilterExpandsProps {
+    cardData: CardItem[];
+  }
+  
+  function FilterExpandsds({ cardData }: FilterExpandsProps) {
+    const { t } = useTranslation();
+  
     const [buttonDropdown, setButtonDropdown] = useState([false, false, false, false, false, false]);
-
+  
     const handlePodropbostiButtonClick = (index: number) => {
-        setButtonDropdown((prev) =>
-            prev.map((value, i) => (i === index ? !value : value))
-        );
+      setButtonDropdown((prev) =>
+        prev.map((value, i) => (i === index ? !value : value))
+      );
     };
-
+  
+    const handleFilterByPrice = (price: number) => {
+      const filteredCards: CardItem[] = cardData.filter(
+        (card) => parseInt(card.price_before.replace(/\s+/g, '')) < price
+      );
+      console.log(filteredCards)
+    };
     return (
         <div className={scss.wrapper}>
             <div className={scss.wrapper_top}>
@@ -71,9 +93,9 @@ function FilterExpands() {
                         </label>
                         {buttonDropdown[0] && (
                             <div className={scss.podropbosti__buttons}>
-                                <label>
+                                <label onClick={() => handleFilterByPrice(30000)}>
                                     <input type="checkbox" />
-                                    <span>{t("filtation.zarplata.30")}</span>
+                                    <span>{t('filtation.zarplata.30')}</span>
                                 </label>
                                 <label>
                                     <input type="checkbox" />
@@ -294,4 +316,4 @@ function FilterExpands() {
     );
 }
 
-export default FilterExpands;
+export default FilterExpandsds;
