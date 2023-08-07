@@ -109,7 +109,6 @@ const Header = () => {
   const toggleDropdown = () => {
     setIsSelDropdownOpen((prevState) => !prevState);
   };
-
   return (
     <div className={scss.header}>
       <div className={scss.container}>
@@ -275,9 +274,8 @@ const Header = () => {
                   </h6>{" "}
                   <hr className={scss.verticalLine} />{" "}
                   <h6
-                    className={`${isSeeker ? scss.seekerActive : ""} ${
-                      scss.seekerLabel
-                    }`}
+                    className={`${isSeeker ? scss.seekerActive : ""} ${scss.seekerLabel
+                      }`}
                     onClick={() => handleToggleUserType(false)}
                   >
                     Соискатель

@@ -61,7 +61,7 @@ function NewVakansies() {
   return (
     <div className="container">
       <div className={scss.vak}>
-        <div className={scss.vak_left}>
+          <div className={scss.vak_left}>
           <Filtration />
         </div>
         <div className={scss.vak_container}>
@@ -89,12 +89,10 @@ function NewVakansies() {
                 onClick={handleSortBySalaryDesc}
               >
                 <p>По убыванию зарплат</p>
-              </div>
-            </div>
+             </div>
           </div>
           <div className={scss.cont__coursesCard}>{renderVakansiesCard}</div>
-        </div>
-      </div>
+       </div>
     </div>
   );
 }
