@@ -18,7 +18,7 @@ let options = [
   'Иссык-Куль',
   'Джалал-Абад',
   'Баткен',
-  'Талас',  
+  'Талас',
   'Нарын'
 ];
 
@@ -49,12 +49,12 @@ function Vakansii() {
     setSelectedIndex(index);
     setSelectedOption(selectedOptionWithoutSoftSign);
 
-    
+
     handleClose();
   };
 
 
-  
+
 
 
   const handleClose = () => {
@@ -90,12 +90,12 @@ function Vakansii() {
               aria-controls="lock-menu"
               aria-label="when device is locked"
               aria-expanded={open ? 'true' : undefined}
-              >
+            >
               <label>
                 <ListItemText
                   primary={t("vakansii.rabota")}
                   secondary={disableSoftSign ? selectedOption : `${selectedOption}e`}
-                  />
+                />
                 <Image
                   src="/images/SectionIcon/Vector.svg"
                   alt="Header Image"
