@@ -199,21 +199,21 @@ a {
   height: 100vh;
   background: white;
 }
-#lock-menu ul{
+#lock-menu ul {
   padding: 0px !important;
 }
 
 #lock-button {
   padding: 0px !important;
   display: flex;
-  margin-right: 7px; 
+  margin-right: 7px;
   color: #333;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.MuiTypography-root{
+.MuiTypography-root {
   font-family: Arial, sans-serif;
   display: flex;
   margin-right: 7px;
