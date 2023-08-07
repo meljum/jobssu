@@ -37,6 +37,7 @@ interface CardItem {
       );
       console.log(filteredCards)
     };
+    
     return (
         <div className={scss.wrapper}>
             <div className={scss.wrapper_top}>
