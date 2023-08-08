@@ -37,8 +37,7 @@ function NewVakansies() {
       item.salary.includes(searchText)
     );
   }, [searchText, sortOrder]);
- 
-  
+
   const numberOfVakansies = filteredVakansies.length;
 
   const renderVakansiesCard = useMemo(() =>
