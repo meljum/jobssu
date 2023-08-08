@@ -2,11 +2,12 @@ import React, { useMemo, useState } from "react";
 import scss from "./NewVakansies.module.scss";
 import { VakansiesCardArr, VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 import Card from "../../components/Card/Card";
+import { useTranslation } from "react-i18next";
 
 function NewVakansies() {
   const [searchText, setSearchText] = useState<string>("");
   const [sortOrder, setSortOrder] = useState<string>("default");
-
+  const { t, i18n } = useTranslation();
   const handleSortByDefault = () => {
     setSortOrder("default");
   };
@@ -61,29 +62,29 @@ function NewVakansies() {
     <div className="container">
       <div className={scss.vak}>
         <div className={scss.vak_cont}>
-          <h1 className={scss.vak__h1}> Новые вакансии </h1>
+          <h1 className={scss.vak__h1}>{t("header.hedaer_vak")}</h1>
           <div className={scss.vak_wrap}>
             <div className={scss.vak_inp}>
-              <p> Найдено:{numberOfVakansies}</p>
+              <p>{t("header.hedaer_Found")}:{numberOfVakansies}</p>
             </div>
-            <p className={scss.vak_title}>Сортировать:</p>
+            <p className={scss.vak_title}>{t("header.hedaer_sort")}:</p>
             <div
               className={`${scss.vak_inp1} ${sortOrder === "default" ? scss.active : ""}`}
               onClick={handleSortByDefault}
             >
-              <p> По умолчанию</p>
+              <p>{t("header.hedaer_Default")}</p>
             </div>
             <div
               className={`${scss.vak_inp2} ${sortOrder === "salaryAsc" ? scss.active : ""}`}
               onClick={handleSortBySalaryAsc}
             >
-              <p>По возрастанию зарплат</p>
+              <p>{t("header.hedaer_Ascending")}</p>
             </div>
             <div
               className={`${scss.vak_inp3} ${sortOrder === "salaryDesc" ? scss.active : ""}`}
               onClick={handleSortBySalaryDesc}
             >
-              <p>По убыванию зарплат</p>
+              <p>{t("header.hedaer_Descending")}</p>
             </div>
           </div>
         </div>

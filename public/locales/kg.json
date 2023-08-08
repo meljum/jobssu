@@ -7,7 +7,13 @@
     "heder_help": "Жардам",
     "heder_contests": "Конкурстар",
     "header_placeholder": "Компанияны, кызматты же кызматты издеңиз",
-    "header_search": "Издөө"
+    "header_search": "Издөө",
+    "hedaer_vak": "Жаны вакансиялар",
+    "hedaer_Found":" Табылды",
+    "hedaer_sort": "Сорттоо",
+    "hedaer_Default":"Демейки",
+    "hedaer_Ascending":"Э/а жогорулатуу боюнча",
+    "hedaer_Descending":"Э/а төмөндө боюнча"
   },
   "main": {
     "main__jobs_title": "Жумуштар",
