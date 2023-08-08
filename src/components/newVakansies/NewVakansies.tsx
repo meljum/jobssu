@@ -2,12 +2,13 @@ import React, { useMemo, useState } from "react";
 import scss from "./NewVakansies.module.scss";
 import { VakansiesCardArr, VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 import Card from "../../components/Card/Card";
+import { useTranslation } from "react-i18next";
 import Filtration from "../Filtration/Filtration";
 
 function NewVakansies() {
   const [searchText, setSearchText] = useState<string>("");
   const [sortOrder, setSortOrder] = useState<string>("default");
-
+  const { t, i18n } = useTranslation();
   const handleSortByDefault = () => {
     setSortOrder("default");
   };

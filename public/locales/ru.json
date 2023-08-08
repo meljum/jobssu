@@ -6,8 +6,14 @@
     "heder_jobs": "Вакансии",
     "heder_help": "Помощь",
     "heder_contests": "Конкурсы",
-    "header_plaseholder": "Поиск компании, должности или услуг",
-    "header_search": "Поиск"
+    "header_placeholder": "Поиск компании, должности или услуг",
+    "header_search": "Поиск",
+    "hedaer_vak": "Новые вакансии",
+    "hedaer_Found":" Найдено",
+    "hedaer_sort": "Сортировать",
+    "hedaer_Default":"По умолчанию",
+    "hedaer_Ascending":"По возрастанию зарплат",
+    "hedaer_Descending":"По убыванию зарплат"
   },
   "main": {
     "main__jobs_title": "Вакансии",
