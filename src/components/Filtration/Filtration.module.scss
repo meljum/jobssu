@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Arial";
+    src: url("/fonts/Arialm.ttf") format("truetype");
+}
+
+.wrapper {
+    padding-top: 225px;
+    display: flex;
+    font-family: Arial, sans-serif;
+
+    .wrapper__left {
+        text-align: start;
+
+        button {
+            color: #252525;
+            text-align: start;
+            font-family: Arial;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .left__add {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            gap: 26px;
+            margin-bottom: 53px;
+
+        }
+
+        .left__resume {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            gap: 26px;
+            margin-bottom: 69px;
+        }
+
+        .left__filters {
+            :active {
+                border: 1px solid #0057FF;
+                color: #0057FF !important;
+                background: #FFF;
+            }
+
+            button {
+                border: 1px solid #0057FF;
+
+                padding: 12px 63px;
+                border-radius: 3px;
+                background: #0057FF;
+                color: white !important;
+                text-align: center;
+                font-family: Arial;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+            }
+        }
+    }
+}
