@@ -6,7 +6,7 @@ import { SliderData } from '@/constants/Slider';
 import Image from 'next/image';
 import pic from '../../../public/images/pic2.svg'
 import prev from '../../../public/images/Vector.svg'
-import next from '../../../public/images/Vector (1).svg'
+import next from '../../../public/images/Vector (1).svg'          
 
 
 import 'slick-carousel/slick/slick.css';
