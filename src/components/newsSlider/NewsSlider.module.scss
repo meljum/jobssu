@@ -1,14 +1,15 @@
 .wrap {
     display: flex;
     flex-direction: row;
-    padding: 100px 0 0px 103px;
-    height: 395px;
-    gap: 100px;
+    padding: 100px 0 0px 0px;
+    height: 495px;
+    gap: 60px;
+    align-items: center;
 
     .left {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         width: 389px;
         align-items: flex-start;
 
@@ -78,6 +79,7 @@
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     width: 329.017px;
     height: 311.588px;
+    gap: 15px;
 
     p {
         color: #333;
@@ -103,4 +105,7 @@
 .arr2{
     background: url('../../../public/images/next.svg');
 
+}
+.slick-next{
+    left: -40px;
 }

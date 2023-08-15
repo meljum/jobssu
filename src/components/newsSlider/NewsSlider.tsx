@@ -19,10 +19,10 @@ const NewsSlider: React.FC = () => {
     slickPrev: true,
     Infinite:true,
     speed: 500,
-    slidesToShow: 2.24,
+    slidesToShow: 2.3334,
     slidesToScroll: 1,
-    prevArrow: <button className="slider-arrow prev-arrow"><img className={css.arr1} src={prev} alt="Previous" /></button>,
-    nextArrow: <button className="slider-arrow next-arrow"><img className={css.arr2} src={next} alt="Next" /></button>
+    prevArrow: <button className="slider-arrow prev-arrow"><Image src={prev} width={15} height={59} alt='img'/></button>,
+    nextArrow: <button className="slider-arrow next-arrow"><Image src={next} width={15} height={59} alt='img'/></button>
   }
   const renderSlider = useMemo(() => {
     return SliderData.map((e) => (
@@ -38,7 +38,7 @@ const NewsSlider: React.FC = () => {
     ))
   }, [t])
   return (
-    <div className={css.main}>
+    <div className= ' container'>
       <div className={css.wrap}>
         <div className={css.left}>
           <h1>{t("slider.title")}</h1>
