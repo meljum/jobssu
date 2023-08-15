@@ -26,10 +26,10 @@ const NewsSlider: React.FC = () => {
   }
   const renderSlider = useMemo(() => {
     return SliderData.map((e) => (
-      <div className={css.wrapper}>
+      <div key={e.id} className={css.wrapper}>
         <div className={css.right}>
 
-          <div key={e.id} className={css.card}>
+          <div key={e.id}  className={css.card}>
             <Image src={pic} width={286} height={164} alt='img' />
             <p>{t(e.text)}</p>
           </div>
