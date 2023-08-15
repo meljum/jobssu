@@ -7,16 +7,13 @@ import Image from 'next/image';
 import pic from '../../../public/images/pic2.svg'
 import prev from '../../../public/images/Vector.svg'
 import next from '../../../public/images/Vector (1).svg'          
-
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const NewsSlider: React.FC = () => {
   const { t } = useTranslation();
   const sliderSettings = {    
-    slickNext: true,
-    slickPrev: true,
+
     Infinite:true,
     speed: 500,
     slidesToShow: 2.3334,
