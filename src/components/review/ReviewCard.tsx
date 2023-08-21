@@ -53,7 +53,7 @@ const ReviewCard: React.FC = () => {
             <div className={css.card} key={e.id} >
                 <h1 className={css.text}>{e.text}</h1>
                 <div className={css.btn}>
-                    <Link href='/NewsPage'><button>{e.btn}</button></Link>
+                    <Link href='/ReviewsPage'><button>{e.btn}</button></Link>
                 </div>
                 <div className={css.profile}>
                     <Image src={profilePic} width={48} height={48} alt='profile' />

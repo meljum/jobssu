@@ -8,6 +8,7 @@ import pic from '../../../public/images/pic2.svg'
 import prev from '../../../public/images/Vector.svg'
 import next from '../../../public/images/Vector (1).svg'          
 import 'slick-carousel/slick/slick.css';
+import Link from 'next/link'
 import 'slick-carousel/slick/slick-theme.css';
 
 const NewsSlider: React.FC = () => {
@@ -40,7 +41,9 @@ const NewsSlider: React.FC = () => {
         <div className={css.left}>
           <h1>{t("slider.title")}</h1>
           <p>{t("slider.text")}</p>
+          <Link href='/NewsPage'>
           <button>{t("slider.btn")}</button>
+          </Link>
         </div>
         <div className={css.slider}>
           <Slider {...sliderSettings}>
