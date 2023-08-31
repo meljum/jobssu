@@ -19,8 +19,8 @@ const NewsSlider: React.FC = () => {
     speed: 500,
     slidesToShow: 2.3334,
     slidesToScroll: 1,
-    prevArrow: <button className="slider-arrow prev-arrow"><Image src={prev} width={15} height={59} alt='img'/></button>,
-    nextArrow: <button className="slider-arrow next-arrow"><Image src={next} width={15} height={59} alt='img'/></button>
+    prevArrow: <button className={css.arr1}><Image className={css.arr} src={prev} width={15} height={59} alt='img'/></button>,
+    nextArrow: <button className={css.arr2}><Image className={css.arr}  src={next} width={15} height={59} alt='img'/></button>
   }
   const renderSlider = useMemo(() => {
     return SliderData.map((e) => (
