@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './Review.module.scss'
+import css from './ReviewT.module.scss'
 import useReviewCard from './ReviewCard'
 import { useTranslation } from 'react-i18next';
 
