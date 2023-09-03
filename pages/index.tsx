@@ -6,6 +6,7 @@ import Review from "../src/components/review/Review"
 import Vakansii from "@/components/vakansii/Vakansii";
 import { MainTitle } from "@/constants/Main";
 import Footer from "../src/components/footer/footer";
+import NewsSlider from "./../src/components/newsSlider/NewsSlider";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Main array={MainTitle} />
       <Section/>
       <Vakansii/>
+      <NewsSlider/>
       <Review />
       <Footer />
     </>
