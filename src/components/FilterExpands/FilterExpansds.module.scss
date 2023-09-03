@@ -48,11 +48,9 @@
           .checkboxLabel {
             display: flex;
             align-items: center;
-            
           }
 
           .checkboxLabel input {
-
             margin-right: 8px;
           }
 
@@ -128,21 +126,20 @@
       line-height: normal;
       margin-top: 30px;
       width: 208px;
-      height: 38px;
     }
     .top_checkboxes {
       .checkboxLabel {
         display: flex;
         align-items: center;
-        cursor: pointer; 
-         input {
+        cursor: pointer;
+        input {
           width: 16px;
           height: 20px;
           border-radius: 3px;
           border: 0.5px solid #000;
           background: #fff;
         }
-        .option_text{
+        .option_text {
           width: 300px;
           height: auto;
         }
@@ -150,7 +147,6 @@
 
       label {
         display: flex;
-       
 
         span {
           margin-left: 9px;
