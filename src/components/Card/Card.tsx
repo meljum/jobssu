@@ -8,17 +8,20 @@ import icon5 from "../../../public/images/CardIcon/time.svg";
 import vector from "../../../public/images/CardIcon/Vector.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 
 interface CardItem {
-  id: number;
+  id: string;
   img: string;
   zagalovok: string;
   staj_raboty: string;
   grafik_raboty: string;
+  specialization: string;
   location: string;
   time: string;
-  salary: string;
+  price_from: string;
   price_before: string;
+  currency: string;
 }
 
 const Card: React.FC<CardItem> = (props) => {
@@ -28,10 +31,12 @@ const Card: React.FC<CardItem> = (props) => {
     zagalovok,
     staj_raboty,
     grafik_raboty,
+    specialization,
     location,
     time,
     price_before,
-    salary,
+    price_from,
+    currency,
   } = props;
 
   return (
@@ -77,7 +82,7 @@ const Card: React.FC<CardItem> = (props) => {
                 <div className={scss.description_right}>
                   <div className={scss.right_top}>
                     <Image src={icon3} alt="Icon" width={16} height={16} />
-                    <p>Evyap group</p>
+                    <p>{specialization}</p>
                   </div>
                   <div className={scss.right_middle}>
                     <Image src={icon4} alt="Icon" width={11.5} height={13.35} />
@@ -94,12 +99,12 @@ const Card: React.FC<CardItem> = (props) => {
               <div className={scss.button_text}>
                 <div className={scss.number}>
                   <span className={scss.from_sub}>От</span>
-                  <h5 className={scss.from}>{salary}</h5>
+                  <h5 className={scss.from}>{price_from}</h5>
                 </div>
                 <div className={scss.number}>
                   <span className={scss.before_sub}>До</span>
                   <h5 className={scss.before}>{price_before}</h5>
-                  <span className={scss.som}>сом</span>
+                  <span className={scss.som}>{currency}</span>
                 </div>
               </div>
               <Link href="/YourResume" legacyBehavior>

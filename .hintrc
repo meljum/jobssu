@@ -14,10 +14,17 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "width: fit-content"
         ]
       }
     ],
     "button-type": "off"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 113",
+    "not firefox <= 113"
+  ]
 }

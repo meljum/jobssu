@@ -1,0 +1,168 @@
+.wrapper {
+  margin-top: 39px;
+
+  img {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .wrapper_bottom {
+    .bottom_filterbtn {
+      color: #0057ff;
+      text-align: center;
+      border-radius: 3px;
+      border: 1px solid #0057ff;
+      background: #0057ff;
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 12px 44px;
+      line-height: normal;
+      margin-top: 30px;
+      width: 208px;
+      height: 38px;
+    }
+
+    .bottom_filterbtn:active {
+      border: 1px solid #0057ff;
+      background: #fff;
+      color: #0057ff;
+    }
+
+    .bottom_podrobnosti {
+      display: grid;
+      margin-top: 25px;
+      gap: 25px;
+
+      .podrobnosti_title {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .podropbosti__buttons {
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+
+          .checkboxLabel {
+            display: flex;
+            align-items: center;
+            
+          }
+
+          .checkboxLabel input {
+
+            margin-right: 8px;
+          }
+
+          #buttons_flexStart {
+            display: flex;
+            align-items: flex-start !important;
+
+            input {
+              margin-top: 2px;
+            }
+          }
+
+          label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            input {
+              cursor: pointer;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              border-radius: 3px;
+              border: 0.5px solid #000;
+              background: #fff;
+            }
+
+            span {
+              margin-left: 29px;
+              cursor: pointer;
+              color: #252525;
+              text-align: start;
+              font-family: Arial;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+
+        .title_label {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .wrapper_top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // .checkboxLabel {
+    //   display: flex;
+    //   align-items: center;
+    // }
+
+    // .checkboxLabel input {
+    //   margin-right: 8px;
+    // }
+    .bottom_filterbtn {
+      color: #0057ff;
+      text-align: center;
+      border-radius: 3px;
+      border: 1px solid #0057ff;
+      background: #0057ff;
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 12px 44px;
+      line-height: normal;
+      margin-top: 30px;
+      width: 208px;
+      height: 38px;
+    }
+    .top_checkboxes {
+      .checkboxLabel {
+        display: flex;
+        align-items: center;
+        cursor: pointer; 
+         input {
+          width: 16px;
+          height: 20px;
+          border-radius: 3px;
+          border: 0.5px solid #000;
+          background: #fff;
+        }
+        .option_text{
+          width: 300px;
+          height: auto;
+        }
+      }
+
+      label {
+        display: flex;
+       
+
+        span {
+          margin-left: 9px;
+          color: #252525;
+          text-align: center;
+          font-family: Arial;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
