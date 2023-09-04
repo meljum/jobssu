@@ -9,7 +9,6 @@ import {
   filterOptions,
 } from "../../constants/filterOptionsData";
 import { selectedFilters, setFilteredVakansies } from "./types";
-
 import {
   handleFilterByExperienceRange,
   handleFilterByLocation,
@@ -19,13 +18,11 @@ import {
   handleFilterBySpecialization,
   handleFilterByTime,
 } from "./filterFunctions";
-
 interface FilterExpandsProps {
   numberOfVakansies: number;
   VakansiesCardArr: VakansiesCardArrProps[];
   setFilteredVakansies: (filteredVakansies: VakansiesCardArrProps[]) => void;
 }
-
 const FilterExpands: React.FC<FilterExpandsProps> = ({
   numberOfVakansies,
   VakansiesCardArr,
@@ -68,21 +65,15 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
   const handleZagalovokChange = (newZagalovok: string) => {
     setSelectedZagalovok(newZagalovok);
   };
-
   const handleCheckboxChange = (categoryTitle: string, optionText: string) => {
-    setCheckboxStates((prevStates) => {
-      const updatedStates = { ...prevStates };
-      updatedStates[optionText] = !prevStates[optionText];
-
-      Object.keys(updatedStates).forEach((key) => {
-        if (key !== optionText) {
-          updatedStates[key] = false;
-        }
-      });
-
-      return updatedStates;
+    const updatedStates = { ...checkboxStates };
+    updatedStates[optionText] = !checkboxStates[optionText];
+    setCheckboxStates(updatedStates);
+    Object.keys(updatedStates).forEach((key) => {
+      if (key !== optionText) {
+        updatedStates[key] = false;
+      }
     });
-
     setSelectedFilters((prevFilters) => ({
       ...prevFilters,
       [categoryTitle]: optionText,
@@ -131,17 +122,14 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
           currency = undefined;
           break;
       }
-
       setSelectedFilters((prevFilters) => ({
         ...prevFilters,
         Зарплата: { minPrice, maxPrice, currency },
       }));
     }
   };
-
   const handleFilterButtonClick = () => {
     let filteredData = [...VakansiesCardArr];
-
     filterOptions.forEach((category, index) => {
       if (buttonDropdown[index]) {
         const categoryTitle = category.title;
@@ -219,26 +207,25 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
           case "Специальное":
             const selectedSpecialization = selectedFilters["Специальное"];
             if (selectedSpecialization) {
-              filteredData = handleFilterBySpecial(selectedSpecialization, VakansiesCardArr);
+              filteredData = handleFilterBySpecial(
+                selectedSpecialization,
+                VakansiesCardArr
+              );
             }
-            
             break;
         }
       }
     });
-
     setFilteredData(filteredData);
     setFilteredVakansies(filteredData);
     const newNumberOfVakansies = filteredData.length;
     console.log("Filtered Data:", filteredData);
   };
-
   return (
     <div className={scss.wrapper}>
       <div className={scss.wrapper_top}>
         {filterOptions.map((category, index) => {
           const categoryTitle = category.title;
-
           return (
             <div key={index} className={scss.top_checkboxes}>
               <label onClick={() => handlePodropbostiButtonClick(index)}>
@@ -262,20 +249,26 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
                 <div className={scss.podropbosti__buttons}>
                   {category.options.map((option, optionIndex) => (
                     <label key={optionIndex} className={scss.checkboxLabel}>
-                      <input
-                        type="checkbox"
-                        checked={Boolean(checkboxStates[option.text])}
-                        onClick={() => {
-                          if ("zagalovok" in option) {
-                            handleZagalovokChange(option.zagalovok);
-                          }
-                        }}
-                        onChange={() => {
-                          console.log("Checkbox label clicked");
-                          handleCheckboxChange(categoryTitle, option.text);
-                        }}
-                      />
-                     <div className={scss.option_text}><span>{t(option.text)}</span></div> 
+                      <div className={scss.checkboxAndText}>
+                        <input
+                          type="checkbox"
+                          checked={Boolean(checkboxStates[option.text])}
+                          onClick={() => {
+                            if ("zagalovok" in option) {
+                              handleZagalovokChange(option.zagalovok);
+                            }
+                          }}
+                          onChange={() => {
+                            console.log("Checkbox label clicked");
+                            handleCheckboxChange(categoryTitle, option.text);
+                          }}
+                        />
+                        <div className={scss.option_text}>
+                          <span className={scss.leftAlign}>
+                            {t(option.text)}
+                          </span>
+                        </div>
+                      </div>
                     </label>
                   ))}
                 </div>
