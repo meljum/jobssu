@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 import {
-  filterOptionsData,
   filterOptions,
   FilterOptionType,
   OptionType,
