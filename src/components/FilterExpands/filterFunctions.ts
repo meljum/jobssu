@@ -58,11 +58,21 @@ export const handleFilterBySpecialization = (
   return data.filter((item) => item.zagalovok === zagalovok);
 };
 
-export const handleFilterByExperienceRange = (experienceText: string, data: []) => {
+export const handleFilterByExperienceRange = (
+  experienceText: string,
+  data: []
+) => {
+  if (experienceText === "Не имеет значения") {
+    return data;
+  }
   let minExperience = 0;
   let maxExperience = Infinity;
 
   switch (experienceText) {
+    case "Не имеет значения":
+      minExperience = 0;
+      maxExperience = 0;
+      break;
     case "От 1 до 3 лет":
       minExperience = 1;
       maxExperience = 3;
@@ -82,7 +92,7 @@ export const handleFilterByExperienceRange = (experienceText: string, data: []) 
     default:
       return data;
   }
-  const filteredData = data.filter((card: { staj_raboty: string; }) => {
+  const filteredData = data.filter((card: { staj_raboty: string }) => {
     const cardExperience = parseInt(card.staj_raboty.split(" ")[0], 10);
     return cardExperience >= minExperience && cardExperience <= maxExperience;
   });
@@ -142,12 +152,11 @@ export const handleFilterBySpecial = (
   selectedSpecialization: string,
   data: VakansiesCardArrProps[]
 ): VakansiesCardArrProps[] => {
-  const filteredData = data.filter((card) =>
-    card.specialization === selectedSpecialization
+  const filteredData = data.filter(
+    (card) => card.specialization === selectedSpecialization
   );
   return filteredData;
 };
-
 
 export const sortByPriceAsc = (data: any) =>
   [...data].sort(

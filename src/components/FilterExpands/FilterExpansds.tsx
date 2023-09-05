@@ -87,7 +87,6 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
       setSelectedTime(optionText);
       console.log("Selected Time:", optionText);
     }
-
     if (categoryTitle === "Зарплата") {
       let minPrice: number | undefined,
         maxPrice: number | undefined,
@@ -188,33 +187,48 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
                 );
               }
               break;
-
-              case "Стаж работы":
-                if (typeof selectedOption === "string") {
+            case "Стаж работы":
+              if (typeof selectedOption === "string") {
+                if (selectedOption === "Не имеет значения") {
+                  filteredData = VakansiesCardArr;
+                } else {
                   const selectedExperienceOption = category.options.find(
                     (option: OptionType) => option.text === selectedOption
                   );
-              
-                  if (selectedExperienceOption) {
-                    if ("minExperience" in selectedExperienceOption && "maxExperience" in selectedExperienceOption) {
-                      const minExperience = parseInt(selectedExperienceOption.minExperience || "0");
-                      const maxExperience = parseInt(selectedExperienceOption.maxExperience || "Infinity", 10);
-              
-                      filteredData = filteredData.filter((card) => {
-                        const cardExperience = parseInt(card.staj_raboty.split(" ")[0], 10);
-                        return cardExperience >= minExperience && cardExperience <= maxExperience;
-                      });
-                    } else {
-                      console.error(`No matching option for ${selectedOption}`);
-                    }
+
+                  if (
+                    selectedExperienceOption &&
+                    "minExperience" in selectedExperienceOption &&
+                    "maxExperience" in selectedExperienceOption
+                  ) {
+                    const minExperience = parseInt(
+                      selectedExperienceOption.minExperience || "0"
+                    );
+                    const maxExperience = parseInt(
+                      selectedExperienceOption.maxExperience || "Infinity",
+                      10
+                    );
+
+                    filteredData = VakansiesCardArr.filter((card) => {
+                      const cardExperience = parseInt(
+                        card.staj_raboty.split(" ")[0],
+                        10
+                      );
+                      return (
+                        cardExperience >= minExperience &&
+                        cardExperience <= maxExperience
+                      );
+                    });
                   } else {
                     console.error(`No matching option for ${selectedOption}`);
                   }
-                } else {
-                  console.error(`selectedOption is not a string: ${selectedOption}`);
                 }
-                break;
-              
+              } else {
+                console.error(
+                  `selectedOption is not a string: ${selectedOption}`
+                );
+              }
+              break;
             case "Специальное":
               const selectedSpecialization = selectedFilters["Специальное"];
               if (selectedSpecialization) {
