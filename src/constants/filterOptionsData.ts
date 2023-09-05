@@ -3,9 +3,26 @@ export type filterOptionsData = {
 } & {
   "Последние вакансии": (now: Date, cardDate: Date, selectedTime: string | null) => boolean;
 };
+export type OptionType = {
+  text: string;
+  minExperience?: string;
+  maxExperience?: string;
+  time?: string; 
+};
+export type FilterOptionType = {
+  title: string;
+  options: (
+    | OptionType
+    | { text: string; minPrice: string; maxPrice: string; currency?: string }
+    | { text: string; cityName: string } 
+    | { text: string; schedule: string } 
+    | { text: string; zagalovok: string }
+    | { text: string; minExperience: string; maxExperience: string } 
+    | { text: string; specialization: string }
+  )[]; 
+};
 
-  
-export const filterOptions = [
+export const filterOptions: FilterOptionType[]= [
   {
     title: "Последние вакансии",
     options: [
@@ -28,13 +45,13 @@ export const filterOptions = [
   {
     title: "Зарплата",
     options: [
-      { text: "до 30000сом", minPrice: 0, maxPrice: 30000 },
-      { text: "30000 - 50000сом", minPrice: 30000, maxPrice: 50000 },
-      { text: "50000 - 80000сом", minPrice: 50000, maxPrice: 80000 },
+      { text: "до 30000сом", minPrice:"0" , maxPrice: "30000" },
+      { text: "30000 - 50000сом", minPrice: "30000", maxPrice: "50000" },
+      { text: "50000 - 80000сом", minPrice: "50000", maxPrice: "80000" },
       {
         text: "Выше 80000сом",
-        minPrice: 80000,
-        maxPrice: Infinity,
+        minPrice: "80000",
+        maxPrice: Infinity as unknown as string
       },
       { text: "В долларах", currency: "доллар" },
     ],
@@ -62,7 +79,7 @@ export const filterOptions = [
         schedule: "Удаленная работа",
       },
       {
-        text: "filtation.schedule.FlexibleWork",
+        text: "Гибкий график",
         schedule: "Гибкий график",
       },
       {
@@ -75,11 +92,11 @@ export const filterOptions = [
     title: "Специализация",
     options: [
       {
-        text: "filtation.specialization.meneger",
+        text: "Менеджер по продажам, менеджер по работе с клиентами",
         zagalovok: "Менеджер по продажам, менеджер по работе с клиентами",
       },
       {
-        text: "filtation.schedule.shifDay",
+        text: "Сменный график",
         zagalovok: "Сменный график",
       },
       {
@@ -87,7 +104,7 @@ export const filterOptions = [
         zagalovok: "Бухгалтер",
       },
       {
-        text: "filtation.specialization.seller",
+        text: "Продавец-консультант, продавец-кассир",
         zagalovok: "Продавец-консультант, продавец-кассир",
       },
       {
@@ -101,28 +118,28 @@ export const filterOptions = [
     options: [
       {
         text: "Не имеет значения",
-        minExperience: 0,
-        maxExperience: Infinity,
+        minExperience: "0",
+        maxExperience: "Infinity",
       },
       {
         text: "От 1 до 3 лет",
-        minExperience: 1,
-        maxExperience: 3,
+        minExperience: "1",
+        maxExperience: "3",
       },
       {
         text: "Без опыта",
-        minExperience: 0,
-        maxExperience: 0,
+        minExperience: "0",
+        maxExperience: "0",
       },
       {
         text: "От 3 до 7 лет",
-        minExperience: 3,
-        maxExperience: 7,
+        minExperience: "3",
+        maxExperience: "7",
       },
       {
         text: "Более 7 лет",
-        minExperience: 7,
-        maxExperience: Infinity,
+        minExperience: "7",
+        maxExperience: "Infinity",
       },
     ],
   },
@@ -144,3 +161,5 @@ export const filterOptions = [
     ],
   },
 ];
+
+  

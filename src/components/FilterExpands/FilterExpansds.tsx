@@ -7,6 +7,8 @@ import { VakansiesCardArrProps } from "../../constants/VakansiesCardArr";
 import {
   filterOptionsData,
   filterOptions,
+  FilterOptionType,
+  OptionType,
 } from "../../constants/filterOptionsData";
 import { selectedFilters, setFilteredVakansies } from "./types";
 import {
@@ -132,87 +134,97 @@ const FilterExpands: React.FC<FilterExpandsProps> = ({
     let filteredData = [...VakansiesCardArr];
     filterOptions.forEach((category, index) => {
       if (buttonDropdown[index]) {
-        const categoryTitle = category.title;
-        const selectedOption = selectedFilters[categoryTitle];
-        console.log("Selected Salary Option:", selectedOption);
-        console.log("Filtering category:", categoryTitle);
-        switch (category.title) {
-          case "Последние вакансии":
-            if (selectedOption) {
-              filteredData = handleFilterByTime(selectedTime, filteredData);
-            }
-            break;
-          case "Зарплата":
-            if (selectedOption) {
-              if (selectedOption.text === "В долларах") {
-                filteredData = VakansiesCardArr;
-              } else {
-                const { minPrice, maxPrice, currency } =
-                  selectedFilters[categoryTitle] || {};
-                filteredData = handleFilterByPriceRange(
-                  minPrice,
-                  maxPrice,
-                  currency,
+        const category: FilterOptionType = filterOptions[index];
+        if (buttonDropdown[index]) {
+          const categoryTitle = category.title;
+
+          const selectedOption = selectedFilters[categoryTitle];
+          console.log("Selected Salary Option:", selectedOption);
+          console.log("Filtering category:", categoryTitle);
+          switch (category.title) {
+            case "Последние вакансии":
+              if (selectedOption) {
+                filteredData = handleFilterByTime(selectedTime, filteredData);
+              }
+              break;
+            case "Зарплата":
+              if (selectedOption) {
+                if (selectedOption.text === "В долларах") {
+                  filteredData = VakansiesCardArr;
+                } else {
+                  const { minPrice, maxPrice, currency } =
+                    selectedFilters[categoryTitle] || {};
+                  filteredData = handleFilterByPriceRange(
+                    minPrice,
+                    maxPrice,
+                    currency,
+                    VakansiesCardArr
+                  );
+                }
+              }
+              break;
+            case "Города":
+              if (selectedOption) {
+                filteredData = handleFilterByLocation(
+                  selectedOption,
                   VakansiesCardArr
                 );
               }
-            }
-            break;
-          case "Города":
-            if (selectedOption) {
-              filteredData = handleFilterByLocation(
-                selectedOption,
-                VakansiesCardArr
-              );
-            }
-            break;
-          case "График работы":
-            if (selectedOption) {
-              console.log("Selected schedule:", selectedOption);
-              filteredData = handleFilterBySchedule(
-                selectedOption,
-                VakansiesCardArr
-              );
-            }
-            break;
-          case "Специализация":
-            if (selectedZagalovok) {
-              filteredData = handleFilterBySpecialization(
-                selectedZagalovok,
-                VakansiesCardArr
-              );
-            }
-            break;
-          case "Стаж работы":
-            if (selectedOption) {
-              const selectedExperienceOption = category.options.find(
-                (option: { text: string }) => option.text === selectedOption
-              );
-              if (selectedExperienceOption) {
-                const minExperience = selectedExperienceOption.minExperience;
-                const maxExperience = selectedExperienceOption.maxExperience;
-                filteredData = filteredData.filter((card) => {
-                  const cardExperience = parseInt(
-                    card.staj_raboty.split(" ")[0],
-                    10
-                  );
-                  return (
-                    cardExperience >= minExperience &&
-                    cardExperience <= maxExperience
-                  );
-                });
+              break;
+            case "График работы":
+              if (selectedOption) {
+                console.log("Selected schedule:", selectedOption);
+                filteredData = handleFilterBySchedule(
+                  selectedOption,
+                  VakansiesCardArr
+                );
               }
-            }
-            break;
-          case "Специальное":
-            const selectedSpecialization = selectedFilters["Специальное"];
-            if (selectedSpecialization) {
-              filteredData = handleFilterBySpecial(
-                selectedSpecialization,
-                VakansiesCardArr
-              );
-            }
-            break;
+              break;
+            case "Специализация":
+              if (selectedZagalovok) {
+                filteredData = handleFilterBySpecialization(
+                  selectedZagalovok,
+                  VakansiesCardArr
+                );
+              }
+              break;
+
+              case "Стаж работы":
+                if (typeof selectedOption === "string") {
+                  const selectedExperienceOption = category.options.find(
+                    (option: OptionType) => option.text === selectedOption
+                  );
+              
+                  if (selectedExperienceOption) {
+                    if ("minExperience" in selectedExperienceOption && "maxExperience" in selectedExperienceOption) {
+                      const minExperience = parseInt(selectedExperienceOption.minExperience || "0");
+                      const maxExperience = parseInt(selectedExperienceOption.maxExperience || "Infinity", 10);
+              
+                      filteredData = filteredData.filter((card) => {
+                        const cardExperience = parseInt(card.staj_raboty.split(" ")[0], 10);
+                        return cardExperience >= minExperience && cardExperience <= maxExperience;
+                      });
+                    } else {
+                      console.error(`No matching option for ${selectedOption}`);
+                    }
+                  } else {
+                    console.error(`No matching option for ${selectedOption}`);
+                  }
+                } else {
+                  console.error(`selectedOption is not a string: ${selectedOption}`);
+                }
+                break;
+              
+            case "Специальное":
+              const selectedSpecialization = selectedFilters["Специальное"];
+              if (selectedSpecialization) {
+                filteredData = handleFilterBySpecial(
+                  selectedSpecialization,
+                  VakansiesCardArr
+                );
+              }
+              break;
+          }
         }
       }
     });
