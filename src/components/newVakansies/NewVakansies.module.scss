@@ -40,7 +40,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-top: 80px;
+    margin-top: 105px;
+    margin-bottom: -20px;
+    margin-right: 213px;
   }
   .vak_wrap {
     display: flex;
@@ -52,7 +54,6 @@
       flex-shrink: 0;
       border-radius: 3px;
       background: #0057ff;
-      // margin-left: 344px;
       margin-top: 102.59px;
       p {
         color: #fff;
