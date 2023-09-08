@@ -49,7 +49,8 @@
         flex-shrink: 0;
         border-radius: 20px;
         background: #0057ff;
-        top: 44px;
+        top: 47px;
+        margin-top: 2px;
         right: -17px;
         background-color: #0057ff;
       }
@@ -58,6 +59,7 @@
         position: absolute;
         text-align: start;
         background-color: white;
+        margin-top: 10px;
         top: 57px;
         right: -42px;
         width: 111px;
@@ -257,7 +259,7 @@
       gap: 25px;
       .hr1 {
         position: relative;
-        top: 21px;
+        top: 26px;
         width: 43.046px;
         height: 3px;
         border-radius: 20px;
@@ -266,11 +268,12 @@
       .dropdownMassege_content {
         position: absolute;
         background-color: white;
-        right: 10px;
+        right: 80px;
+        margin-right: 40px;
+        margin-top: 10px;
         top: 75px;
         border-radius: 5px;
-        width: 390px;
-        height: 385px;
+        width: 320px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 0.7;
         .dropMassege {
@@ -278,6 +281,7 @@
           .divMasseges {
             display: flex;
             text-align: start;
+            width: 300px;
             margin: 10px 10px;
             border-radius: 5px;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -288,6 +292,7 @@
               color: #333;
               font-family: Arial;
               font-size: 12px;
+              width: 218px;
               font-style: normal;
               font-weight: 400;
               line-height: 16px;
@@ -296,7 +301,7 @@
               align-items: center;
               height: 40px;
               width: 40px;
-              margin: 19px 20px 18.7px 15px;
+              margin: 19px 10px 18.7px 15px;
             }
           }
         }
@@ -306,10 +311,12 @@
           border: none;
           border-radius: 5px;
           background-color: #0057ff;
-          position: absolute;
-          top: 343px;
-          left: 250px;
-          z-index: 10;
+          position: relative;
+          top: -3px;
+          right: -180px;
+          margin-bottom: 10px;
+          margin-top: 8px;
+          z-index: 1;
           cursor: pointer;
           p {
             position: relative;
