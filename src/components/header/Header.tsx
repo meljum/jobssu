@@ -68,7 +68,7 @@ const Header = () => {
   const renderLinks = useMemo(() => {
     return links.map((item) => (
       <Link key={item.id} href={item.to} legacyBehavior>
-        <p className={scss.navLink}>{t(item.label) || ""}</p>
+        <a className={scss.navLink}>{t(item.label) || ""}</a>
       </Link>
     ));
   }, [t]);
@@ -83,7 +83,7 @@ const Header = () => {
             width={24}
             height={24}
           />
-          <p> {item.title}</p>
+          <a> {item.title}</a>
         </div>
       )),
     []
@@ -93,15 +93,15 @@ const Header = () => {
       href: "/JobsPage",
       label: isSeeker ? " Добавить резюме" : "Добавить вакансию",
     },
-    { href: "/Profile", label: "Профиль" },
+    { href: "/ProfilePage", label: "Профиль" },
     { href: "/HelpPage", label: "Помощь" },
-    { href: "/Settings", label: "Настройки" },
+    { href: "/SettingsPage", label: "Настройки" },
   ];
 
   const dropdownItemsJSX = useMemo(() => {
     return dropdownItems.map((item, index) => (
       <Link key={index} href={item.href} legacyBehavior>
-        <p>{item.label}</p>
+        <a>{item.label}</a>
       </Link>
     ));
   }, [dropdownItems]);
@@ -112,8 +112,8 @@ const Header = () => {
   return (
     <div className={scss.header}>
       <div className={scss.container}>
-        <Link href="/" passHref>
-          <p>compas</p>
+        <Link href="/" passHref legacyBehavior>
+          <a>compas</a>
         </Link>
         <div className={scss.dropdown}>
           <Image
@@ -132,14 +132,14 @@ const Header = () => {
           )}
         </div>
         <Link href="/NewVakansiesPage" legacyBehavior>
-          <p className={`${scss.vak} ${scss.blackText}`}>
+          <a className={`${scss.vak} ${scss.blackText}`}>
             {t("header.heder_jobs")}
-          </p>
+          </a>
         </Link>
         <Link href="/ContestsPage" legacyBehavior>
-          <p className={`${scss.konk} ${scss.blackText}`}>
+          <a className={`${scss.konk} ${scss.blackText}`}>
             {t("header.heder_contests")}
-          </p>
+          </a>
         </Link>
         <div className={scss.input}>
           <img
@@ -166,12 +166,12 @@ const Header = () => {
               <div className={scss.dropdownOptions}>
                 <div className={scss.dropdownOptions_p}>
                   <Link href="/JobsPage" passHref legacyBehavior>
-                    <p>Резюме</p>
+                    <a>Резюме</a>
                   </Link>
                 </div>
                 <div className={scss.dropdownOptionsP}>
                   <Link href="/CompaniesPage" passHref legacyBehavior>
-                    <p>Компания</p>
+                    <a>Компания</a>
                   </Link>
                 </div>
               </div>
@@ -207,7 +207,7 @@ const Header = () => {
                 <div className={scss.dropMassege}>{renderMasseges}</div>
                 <div className={scss.btn}>
                   <Link href="/NotificationsPage" passHref legacyBehavior>
-                    <p>Посмотрите все</p>
+                    <a>Посмотрите все</a>
                   </Link>
                 </div>
               </div>
@@ -266,20 +266,20 @@ const Header = () => {
               <div className={scss.dropdownUser_header}>
                 <h5>User_name</h5>
                 <div className={scss.dropdownUser_h6}>
-                  <h6
+                  <p
                     className={isEmployer ? scss.employerActive : ""}
                     onClick={() => handleToggleUserType(true)}
                   >
                     Работодатель
-                  </h6>{" "}
+                  </p>{" "}
                   <hr className={scss.verticalLine} />{" "}
-                  <h6
+                  <p
                     className={`${isSeeker ? scss.seekerActive : ""} ${scss.seekerLabel
                       }`}
                     onClick={() => handleToggleUserType(false)}
                   >
                     Соискатель
-                  </h6>
+                  </p>
                 </div>
                 <hr />
               </div>
@@ -287,7 +287,7 @@ const Header = () => {
                 {dropdownItemsJSX}
               </div>
               <div className={scss.btn}>
-                <p onClick={handleLogout}>Выйти</p>
+                <a onClick={handleLogout}>Выйти</a>
               </div>
             </div>
           )}

@@ -22,7 +22,7 @@
     background-color: white;
     z-index: 3;
 
-    p {
+    a {
       color: #0057ff;
       font-size: 18px;
       font-family: Arial;
@@ -30,7 +30,7 @@
       font-weight: 900;
     }
 
-    p {
+    a {
       text-decoration: none;
     }
 
@@ -74,7 +74,7 @@
           opacity: 1;
         }
 
-        p {
+        a {
           position: relative;
           text-align: start;
           font-size: 16px;
@@ -162,22 +162,21 @@
           border: 0.3px solid rgba(0, 0, 0, 0.7);
           border-top: none;
           .dropdownOptionsP {
-            p {
+            a {
               position: relative;
-              top: 10px;
+              top: 20px;
               left: 10px;
             }
           }
           .dropdownOptions_p {
-             
             text-align: start;
-            p {
+            a {
               position: relative;
               top: 10px;
               left: 10px;
             }
           }
-          p {
+          a {
             position: relative;
             text-align: start;
             padding: 5px 5px;
@@ -189,7 +188,7 @@
             line-height: normal;
             &:hover {
               color: #0057ff;
-             }
+            }
           }
         }
         .selectedOption {
@@ -231,6 +230,11 @@
         font-style: normal;
         font-weight: 400;
         a {
+          font-size: 14px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: 400;
+          color: white;
           position: relative;
           top: 10px;
         }
@@ -287,7 +291,7 @@
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
             background-color: white;
 
-            p {
+            a {
               padding: 15px 15px 15px 20px;
               color: #333;
               font-family: Arial;
@@ -318,7 +322,7 @@
           margin-top: 8px;
           z-index: 1;
           cursor: pointer;
-          p {
+          a {
             position: relative;
             color: #fff;
             text-align: center;
@@ -356,7 +360,7 @@
         background: #0057ff;
         margin: 10px 95px;
         cursor: pointer;
-        p {
+        a {
           position: relative;
           color: #fff;
           font-size: 14px;
@@ -387,7 +391,7 @@
         }
         .dropdownUser_h6 {
           display: flex;
-
+          cursor: pointer;
           .verticalLine {
             position: relative;
             display: inline-block;
@@ -397,35 +401,35 @@
             top: 20px;
           }
 
-          .seekerLabel{
-           padding-left:10px;
+          .seekerLabel {
+            padding-left: 10px;
           }
           .employerActive {
             color: blue;
             cursor: pointer;
           }
-          .seekerActive{
+          .seekerActive {
             margin-left: 0px;
             color: blue;
+            cursor: pointer;
           }
-          
-          h6 {
+
+          p {
             color: #333;
             font-size: 14px;
             font-family: Arial;
             font-style: normal;
             font-weight: 400;
-            padding: 20px 10px 15px 32px; 
+            padding: 20px 10px 15px 32px;
             cursor: pointer;
           }
         }
-      
       }
       .dropdown_add {
         position: relative;
         text-align: start;
         bottom: 40px;
-        p {
+        a {
           position: relative;
           display: flex;
 
