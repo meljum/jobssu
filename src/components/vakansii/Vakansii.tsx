@@ -143,10 +143,7 @@ function Vakansii() {
           <button className={scss.button}>{t("vakansii.vakansii")}</button>
         </Link>
       </div>
-      <div className={`${scss.selectedOption} ${selectedOption && scss.selectedOptionActive}`}>
-        {selectedOption}
-      </div>
-      <div className={scss.wrapper__bottom}>{renderVakansii}</div>
+     <div className={scss.wrapper__bottom}>{renderVakansii}</div>
     </div>
   );
 }

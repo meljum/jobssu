@@ -72,7 +72,7 @@ export const filterOptions: FilterOptionType[]= [
   {
     title: "График работы",
     options: [
-      { text: "полный день", schedule: "полный день" },
+      { text: "Полный день", schedule: "Полный день" },
       { text: "Сменный график", schedule: "Сменный график" },
       {
         text: "Удаленная работа",
