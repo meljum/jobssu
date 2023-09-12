@@ -15,12 +15,7 @@ const Header = () => {
   const [isDropdOp, setIsDropdOp] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
   const [isEmployer, setIsEmployer] = useState(false);
-  // const [isEmployerClicked, setisEmployerClicked] = useState(false);
   const [isSelDropdownOpen, setIsSelDropdownOpen] = useState(false);
-  // const [imageSrc, setImageSrc] = useState("/images/header/messages-1.svg");
-  // const [image1Src, setImage1Src] = useState(
-  //   "/images/header/archive-tick1.svg"
-  // );
 
   function change1Image(event: React.MouseEvent<HTMLImageElement, MouseEvent>) {
     event.currentTarget.src = "/images/header/archive-tick1.svg";
@@ -114,7 +109,6 @@ const Header = () => {
   const toggleDropdown = () => {
     setIsSelDropdownOpen((prevState) => !prevState);
   };
-
   return (
     <div className={scss.header}>
       <div className={scss.container}>
@@ -137,7 +131,7 @@ const Header = () => {
             </>
           )}
         </div>
-        <Link href="/JobsPage" legacyBehavior>
+        <Link href="/NewVakansiesPage" legacyBehavior>
           <p className={`${scss.vak} ${scss.blackText}`}>
             {t("header.heder_jobs")}
           </p>
@@ -280,9 +274,8 @@ const Header = () => {
                   </h6>{" "}
                   <hr className={scss.verticalLine} />{" "}
                   <h6
-                    className={`${isSeeker ? scss.seekerActive : ""} ${
-                      scss.seekerLabel
-                    }`}
+                    className={`${isSeeker ? scss.seekerActive : ""} ${scss.seekerLabel
+                      }`}
                     onClick={() => handleToggleUserType(false)}
                   >
                     Соискатель

@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const AboutPage = () => {
   return (
     <div>
-      <h1>О нас
-        
-      </h1>
+      <h1>О нас</h1>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
