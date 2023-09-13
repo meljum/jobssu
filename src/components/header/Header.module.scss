@@ -346,7 +346,7 @@
     }
     .dropdownUser_content {
       position: absolute;
-      left: 78%;
+      left: 80%;
       top: 80px;
       width: 280px;
       height: 255px;
@@ -397,10 +397,42 @@
             display: inline-block;
             border-left: 1px solid black;
             height: 25px;
-            margin: 0px 15px;
+            margin: 0px 10px;
             top: 20px;
           }
-
+          .verticalLine {
+            position: relative;
+            display: inline-block;
+            border-left: 1px solid black;
+            height: 25px;
+            margin: 0px 15px;
+            top: 20px;
+            cursor: pointer; 
+          }
+          
+          .verticalLine:hover {
+            border-color: blue; 
+          }
+          a {
+            position: relative;
+            display: flex;
+            color: #333;
+            font-size: 14px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 400;
+            cursor: pointer;
+            top: 40px;
+            left: 28px;
+            padding: 5px 5px;
+            transition: color 0.3s; 
+          }
+          
+          a:hover {
+            color: blue; 
+            cursor: pointer; 
+          }
+          
           .seekerLabel {
             padding-left: 10px;
           }
@@ -421,7 +453,7 @@
             font-style: normal;
             font-weight: 400;
             padding: 20px 10px 15px 32px;
-            cursor: pointer;
+            cursor: pointer !important;
           }
         }
       }
